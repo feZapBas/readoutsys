@@ -1,0 +1,21 @@
+18:02:30 **** Incremental Build of configuration Debug for project lwip_server_system ****
+make all 
+Generating bif file for the system project
+Executing command '::scw::generate_bif -xpfm /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/rtos2.xpfm -domains freertos10_xilinx_ps7_cortexa9_0 -bifpath /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server_system/Debug/system.bif' on XSCT
+
+****** Software Commandline Tool (XSCT) v2024.2.0
+  **** SW Build 5239620 on Fri Nov 08 16:21:51 MST 2024
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+
+Warning: XSCT is deprecated and will be removed in future releases.
+We recommend using the new Python command-line tool for project management and debugging:
+- Run "vitis -i" for interactive mode.
+- Run "vitis -s <script>" for script mode.
+sdcard_gen --xpfm /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/rtos2.xpfm --sys_config rtos2 --bif /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server_system/Debug/system.bif --bitstream /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/_ide/bitstream/rtos2.bit --elf /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/lwip_server.elf,ps7_cortexa9_0
+creating BOOT.BIN using /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/_ide/bitstream/rtos2.bit
+Running /mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/bin/bootgen  -image /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+
+18:02:37 Build Finished (took 6s.691ms)
+

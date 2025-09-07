@@ -1,9 +1,80 @@
 Nothing to build in platform 'rtos2'
 
-15:06:35 **** Incremental Build of configuration Debug for project lwip ****
+18:36:05 **** Incremental Build of configuration Debug for project lwip_server ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
  
 make --no-print-directory main-build
-make[1]: Nothing to be done for 'main-build'.
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'assign_default_ip':
+../src/main.c:92:50: error: 'DEFAULT_IP_ADDRESS' undeclared (first use in this function)
+   92 |     xil_printf("Configuring default IP %s \r\n", DEFAULT_IP_ADDRESS);
+      |                                                  ^~~~~~~~~~~~~~~~~~
+../src/main.c:92:50: note: each undeclared identifier is reported only once for each function it appears in
+In file included from ../src/main.c:36:
+../src/main.c:95:21: error: 'DEFAULT_IP_MASK' undeclared (first use in this function)
+   95 |     err = inet_aton(DEFAULT_IP_MASK, mask);
+      |                     ^~~~~~~~~~~~~~~
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include/lwip/inet.h:157:54: note: in definition of macro 'inet_aton'
+  157 | #define inet_aton(cp, addr)             ip4addr_aton(cp, (ip4_addr_t*)addr)
+      |                                                      ^~
+../src/main.c:97:21: error: 'DEFAULT_GW_ADDRESS' undeclared (first use in this function)
+   97 |     err = inet_aton(DEFAULT_GW_ADDRESS, gw);
+      |                     ^~~~~~~~~~~~~~~~~~
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include/lwip/inet.h:157:54: note: in definition of macro 'inet_aton'
+  157 | #define inet_aton(cp, addr)             ip4addr_aton(cp, (ip4_addr_t*)addr)
+      |                                                      ^~
+../src/main.c: In function 'network_thread':
+../src/main.c:124:20: error: 'THREAD_STACKSIZE' undeclared (first use in this function); did you mean 'TCPIP_THREAD_STACKSIZE'?
+  124 |                    THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);
+      |                    ^~~~~~~~~~~~~~~~
+      |                    TCPIP_THREAD_STACKSIZE
+../src/main.c:128:5: warning: implicit declaration of function 'dhcp_start'; did you mean 'va_start'? [-Wimplicit-function-declaration]
+  128 |     dhcp_start(&server_netif);
+      |     ^~~~~~~~~~
+      |     va_start
+../src/main.c:130:20: error: 'DHCP_FINE_TIMER_MSECS' undeclared (first use in this function)
+  130 |         vTaskDelay(DHCP_FINE_TIMER_MSECS / portTICK_RATE_MS);
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:131:9: warning: implicit declaration of function 'dhcp_fine_tmr' [-Wimplicit-function-declaration]
+  131 |         dhcp_fine_tmr();
+      |         ^~~~~~~~~~~~~
+../src/main.c:133:22: error: 'DHCP_COARSE_TIMER_SECS' undeclared (first use in this function)
+  133 |         if (mscnt >= DHCP_COARSE_TIMER_SECS*1000) {
+      |                      ^~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:134:13: warning: implicit declaration of function 'dhcp_coarse_tmr' [-Wimplicit-function-declaration]
+  134 |             dhcp_coarse_tmr();
+      |             ^~~~~~~~~~~~~~~
+../src/main.c: In function 'main_thread':
+../src/main.c:152:20: error: 'THREAD_STACKSIZE' undeclared (first use in this function); did you mean 'TCPIP_THREAD_STACKSIZE'?
+  152 |                    THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);
+      |                    ^~~~~~~~~~~~~~~~
+      |                    TCPIP_THREAD_STACKSIZE
+../src/main.c:158:20: error: 'DHCP_FINE_TIMER_MSECS' undeclared (first use in this function)
+  158 |         vTaskDelay(DHCP_FINE_TIMER_MSECS / portTICK_RATE_MS);
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+../src/main.c:180:5: warning: implicit declaration of function 'print_app_header' [-Wimplicit-function-declaration]
+  180 |     print_app_header();
+      |     ^~~~~~~~~~~~~~~~
+../src/main.c:182:5: warning: implicit declaration of function 'start_application' [-Wimplicit-function-declaration]
+  182 |     start_application();
+      |     ^~~~~~~~~~~~~~~~~
+In file included from /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include/xdmaps.h:83,
+                 from ../src/main.c:38:
+../src/main.c: In function 'XDmaPs_DoneISR_0':
+../src/main.c:260:72: error: 'XDMAPS_IXR_ALL_MASK' undeclared (first use in this function); did you mean 'XDMAPS_INTCLR_ALL_MASK'?
+  260 |     XDmaPs_WriteReg(InstPtr->Config.BaseAddress, XDMAPS_INTCLR_OFFSET, XDMAPS_IXR_ALL_MASK);
+      |                                                                        ^~~~~~~~~~~~~~~~~~~
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include/xdmaps_hw.h:255:49: note: in definition of macro 'XDmaPs_WriteReg'
+  255 |         Xil_Out32((BaseAddress) + (RegOffset), (RegisterValue))
+      |                                                 ^~~~~~~~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:295:40: error: 'THREAD_STACKSIZE' undeclared (first use in this function); did you mean 'TCPIP_THREAD_STACKSIZE'?
+  295 |                                        THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);
+      |                                        ^~~~~~~~~~~~~~~~
+      |                                        TCPIP_THREAD_STACKSIZE
+make[1]: *** [src/subdir.mk:29: src/main.o] Error 1
+make: *** [makefile:34: all] Error 2

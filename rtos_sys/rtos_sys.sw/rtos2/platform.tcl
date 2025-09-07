@@ -21,3 +21,5 @@ domain active {freertos10_xilinx_ps7_cortexa9_0}
 platform generate -quick
 platform generate
 catch {platform remove rtos_sys_wrapper}
+bsp reload
+platform generate -domains 
