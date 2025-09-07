@@ -1,0 +1,35 @@
+14:57:42 **** Incremental Build of configuration Debug for project rtos_lwip ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+ 
+make --no-print-directory main-build
+Building file: ../src/echo.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/echo.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/export/rtos_sys_wrapper/sw/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/echo.d" -MT"src/echo.o" -o "src/echo.o" "../src/echo.c"
+Finished building: ../src/echo.c
+ 
+Building file: ../src/iic_phyreset.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_phyreset.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/export/rtos_sys_wrapper/sw/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/iic_phyreset.d" -MT"src/iic_phyreset.o" -o "src/iic_phyreset.o" "../src/iic_phyreset.c"
+Finished building: ../src/iic_phyreset.c
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/export/rtos_sys_wrapper/sw/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: rtos_lwip.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/export/rtos_sys_wrapper/sw/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/bsplib/lib -o "rtos_lwip.elf" ./src/echo.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxiltimer,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+Finished building target: rtos_lwip.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size rtos_lwip.elf  |tee "rtos_lwip.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 172957	   2660	3266624	3442241	 348641	rtos_lwip.elf
+Finished building: rtos_lwip.elf.size
+ 
+
+14:57:42 Build Finished (took 526ms)
+

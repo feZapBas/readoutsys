@@ -2,10 +2,10 @@
 -- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
--- Date        : Sat Sep  6 20:59:07 2025
+-- Date        : Sat Sep  6 20:59:06 2025
 -- Host        : ej3b-GF63-Thin-11SC running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_us_0/rtos_sys_axi_mem_intercon_imp_auto_us_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top rtos_sys_axi_mem_intercon_imp_auto_us_0 -prefix
+--               rtos_sys_axi_mem_intercon_imp_auto_us_0_ rtos_sys_axi_mem_intercon_imp_auto_us_0_sim_netlist.vhdl
 -- Design      : rtos_sys_axi_mem_intercon_imp_auto_us_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -61,8 +61,6 @@ entity rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_w_up
     D : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \USE_RTL_CURR_WORD.current_word_q_reg[2]_1\ : in STD_LOGIC_VECTOR ( 2 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_w_upsizer : entity is "axi_dwidth_converter_v2_1_33_w_upsizer";
 end rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_w_upsizer;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_w_upsizer is
@@ -2929,8 +2927,6 @@ entity rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_register_slice_v2_1_33_axic_r
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 60 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_register_slice_v2_1_33_axic_register_slice : entity is "axi_register_slice_v2_1_33_axic_register_slice";
 end rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_register_slice_v2_1_33_axic_register_slice;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_register_slice_v2_1_33_axic_register_slice is
@@ -4557,8 +4553,6 @@ entity rtos_sys_axi_mem_intercon_imp_auto_us_0_generic_baseblocks_v2_1_2_command
     m_axi_awready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_auto_us_0_generic_baseblocks_v2_1_2_command_fifo : entity is "generic_baseblocks_v2_1_2_command_fifo";
 end rtos_sys_axi_mem_intercon_imp_auto_us_0_generic_baseblocks_v2_1_2_command_fifo;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_auto_us_0_generic_baseblocks_v2_1_2_command_fifo is
@@ -6124,8 +6118,6 @@ entity rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_a_up
     m_axi_awready : in STD_LOGIC;
     \in\ : in STD_LOGIC_VECTOR ( 27 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_a_upsizer : entity is "axi_dwidth_converter_v2_1_33_a_upsizer";
 end rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_a_upsizer;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_a_upsizer is
@@ -6217,8 +6209,6 @@ entity rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_register_slice_v2_1_33_axi_re
     SR : in STD_LOGIC_VECTOR ( 0 to 0 );
     D : in STD_LOGIC_VECTOR ( 60 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_register_slice_v2_1_33_axi_register_slice : entity is "axi_register_slice_v2_1_33_axi_register_slice";
 end rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_register_slice_v2_1_33_axi_register_slice;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_register_slice_v2_1_33_axi_register_slice is
@@ -6271,8 +6261,6 @@ entity rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_axi_
     s_axi_wvalid : in STD_LOGIC;
     m_axi_awready : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_axi_upsizer : entity is "axi_dwidth_converter_v2_1_33_axi_upsizer";
 end rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_axi_upsizer;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_axi_upsizer is
@@ -6632,8 +6620,6 @@ entity rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_top 
   attribute C_S_AXI_ID_WIDTH of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_top : entity is 1;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_top : entity is "axi_dwidth_converter_v2_1_33_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of rtos_sys_axi_mem_intercon_imp_auto_us_0_axi_dwidth_converter_v2_1_33_top : entity is 1;
   attribute P_AXI4 : integer;

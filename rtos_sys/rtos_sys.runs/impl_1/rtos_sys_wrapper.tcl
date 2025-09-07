@@ -97,7 +97,6 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
-set_msg_config -id {HDL-1065} -limit 10000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -106,7 +105,8 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 3
-  set_param runs.launchOptions { -jobs 12  }
+  set_param bd.open.in_stealth_mode 1
+  set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7z007sclg400-1
   set_property board_part_repo_paths {/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vivado/2024.2/data/boards/board_schemas/new/board_files} [current_project]

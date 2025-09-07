@@ -4,8 +4,8 @@
 // Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 // Date        : Sat Sep  6 20:58:54 2025
 // Host        : ej3b-GF63-Thin-11SC running 64-bit Ubuntu 24.04.3 LTS
-// Command     : write_verilog -force -mode synth_stub
-//               /home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_s01_mmu_0/rtos_sys_axi_mem_intercon_imp_s01_mmu_0_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top rtos_sys_axi_mem_intercon_imp_s01_mmu_0 -prefix
+//               rtos_sys_axi_mem_intercon_imp_s01_mmu_0_ rtos_sys_axi_mem_intercon_imp_s01_mmu_0_stub.v
 // Design      : rtos_sys_axi_mem_intercon_imp_s01_mmu_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z007sclg400-1

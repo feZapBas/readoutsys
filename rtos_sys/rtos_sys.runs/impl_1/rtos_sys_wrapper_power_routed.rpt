@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
-| Date             : Sat Sep  6 21:08:01 2025
+| Date             : Sun Sep  7 14:55:47 2025
 | Host             : ej3b-GF63-Thin-11SC running 64-bit Ubuntu 24.04.3 LTS
 | Command          : report_power -file rtos_sys_wrapper_power_routed.rpt -pb rtos_sys_wrapper_power_summary_routed.pb -rpx rtos_sys_wrapper_power_routed.rpx
 | Design           : rtos_sys_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.373        |
+| Total On-Chip Power (W)  | 1.430        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.254        |
+| Dynamic (W)              | 1.310        |
 | Device Static (W)        | 0.119        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 69.2         |
-| Junction Temperature (C) | 40.8         |
+| Max Ambient (C)          | 68.5         |
+| Junction Temperature (C) | 41.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -63,9 +63,9 @@ Table of Contents
 | Signals                  |    <0.001 |     7178 |       --- |             --- |
 | Block RAM                |    <0.001 |        5 |        50 |           10.00 |
 | I/O                      |    <0.001 |        4 |       100 |            4.00 |
-| PS7                      |     1.251 |        1 |       --- |             --- |
+| PS7                      |     1.307 |        1 |       --- |             --- |
 | Static Power             |     0.119 |          |           |                 |
-| Total                    |     1.373 |          |           |                 |
+| Total                    |     1.430 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -88,12 +88,12 @@ Table of Contents
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.674 |       0.647 |      0.027 |       NA    | Unspecified | NA         |
-| Vccpaux   |       1.800 |     0.036 |       0.026 |      0.010 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.675 |       0.647 |      0.027 |       NA    | Unspecified | NA         |
+| Vccpaux   |       1.800 |     0.067 |       0.056 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.017 |       0.014 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.354 |       0.352 |      0.002 |       NA    | Unspecified | NA         |
 | Vcco_mio0 |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
-| Vcco_mio1 |       1.800 |     0.003 |       0.002 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco_mio1 |       1.800 |     0.004 |       0.003 |      0.001 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 
@@ -151,10 +151,10 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| rtos_sys_wrapper         |     1.254 |
-|   rtos_sys_i             |     1.254 |
-|     processing_system7_0 |     1.251 |
-|       inst               |     1.251 |
+| rtos_sys_wrapper         |     1.310 |
+|   rtos_sys_i             |     1.310 |
+|     processing_system7_0 |     1.307 |
+|       inst               |     1.307 |
 +--------------------------+-----------+
 
 

@@ -4,8 +4,8 @@
 -- Tool Version: Vivado v.2024.2 (lin64) Build 5239630 Fri Nov 08 22:34:34 MST 2024
 -- Date        : Sat Sep  6 20:58:54 2025
 -- Host        : ej3b-GF63-Thin-11SC running 64-bit Ubuntu 24.04.3 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_s00_mmu_0/rtos_sys_axi_mem_intercon_imp_s00_mmu_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top rtos_sys_axi_mem_intercon_imp_s00_mmu_0 -prefix
+--               rtos_sys_axi_mem_intercon_imp_s00_mmu_0_ rtos_sys_axi_mem_intercon_imp_s00_mmu_0_sim_netlist.vhdl
 -- Design      : rtos_sys_axi_mem_intercon_imp_s00_mmu_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -39,8 +39,6 @@ entity rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_decerr_slave is
     \gen_axi.gen_write.s_axi_awready_i_reg_0\ : in STD_LOGIC;
     \gen_axi.gen_write.s_axi_wready_i_reg_1\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_decerr_slave : entity is "axi_mmu_v2_1_31_decerr_slave";
 end rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_decerr_slave;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_decerr_slave is
@@ -328,8 +326,6 @@ entity rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_register_slice_v2_1_33_axic_r
     \m_payload_i_reg[58]_0\ : in STD_LOGIC_VECTOR ( 56 downto 0 );
     \FSM_onehot_gen_write.w_state[2]_i_2_0\ : in STD_LOGIC_VECTOR ( 5 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_register_slice_v2_1_33_axic_register_slice : entity is "axi_register_slice_v2_1_33_axic_register_slice";
 end rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_register_slice_v2_1_33_axic_register_slice;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_register_slice_v2_1_33_axic_register_slice is
@@ -1240,8 +1236,6 @@ entity rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_register_slice_v2_1_33_axi_re
     \FSM_onehot_gen_write.w_state[2]_i_2\ : in STD_LOGIC_VECTOR ( 5 downto 0 );
     \m_payload_i_reg[58]\ : in STD_LOGIC_VECTOR ( 24 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_register_slice_v2_1_33_axi_register_slice : entity is "axi_register_slice_v2_1_33_axi_register_slice";
 end rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_register_slice_v2_1_33_axi_register_slice;
 
 architecture STRUCTURE of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_register_slice_v2_1_33_axi_register_slice is
@@ -1425,8 +1419,6 @@ entity rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_top is
   attribute C_USES_DEST of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_top : entity is 0;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_top : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_top : entity is "axi_mmu_v2_1_31_top";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of rtos_sys_axi_mem_intercon_imp_s00_mmu_0_axi_mmu_v2_1_31_top : entity is 1;
   attribute P_AXI4 : integer;

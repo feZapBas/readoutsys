@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x6CA86C78864DFCBB",
+      "boundary_crc": "0x6CA86C78459A9F2B",
       "device": "xc7z007sclg400-1",
       "gen_directory": "../../../../rtos_sys.gen/sources_1/bd/rtos_sys",
       "name": "rtos_sys",
@@ -556,7 +556,7 @@
             "value": "slow"
           },
           "PCW_MIO_16_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_16_PULLUP": {
             "value": "enabled"
@@ -565,7 +565,7 @@
             "value": "slow"
           },
           "PCW_MIO_17_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_17_PULLUP": {
             "value": "enabled"
@@ -574,7 +574,7 @@
             "value": "slow"
           },
           "PCW_MIO_18_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_18_PULLUP": {
             "value": "enabled"
@@ -583,7 +583,7 @@
             "value": "slow"
           },
           "PCW_MIO_19_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_19_PULLUP": {
             "value": "enabled"
@@ -601,7 +601,7 @@
             "value": "slow"
           },
           "PCW_MIO_20_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_20_PULLUP": {
             "value": "enabled"
@@ -610,7 +610,7 @@
             "value": "slow"
           },
           "PCW_MIO_21_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_21_PULLUP": {
             "value": "enabled"
@@ -619,7 +619,7 @@
             "value": "slow"
           },
           "PCW_MIO_22_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_22_PULLUP": {
             "value": "enabled"
@@ -628,7 +628,7 @@
             "value": "slow"
           },
           "PCW_MIO_23_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_23_PULLUP": {
             "value": "enabled"
@@ -637,7 +637,7 @@
             "value": "slow"
           },
           "PCW_MIO_24_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_24_PULLUP": {
             "value": "enabled"
@@ -646,7 +646,7 @@
             "value": "slow"
           },
           "PCW_MIO_25_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_25_PULLUP": {
             "value": "enabled"
@@ -655,7 +655,7 @@
             "value": "slow"
           },
           "PCW_MIO_26_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_26_PULLUP": {
             "value": "enabled"
@@ -664,7 +664,7 @@
             "value": "slow"
           },
           "PCW_MIO_27_IOTYPE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_MIO_27_PULLUP": {
             "value": "enabled"
@@ -1015,7 +1015,7 @@
             "value": "LVCMOS 3.3V"
           },
           "PCW_PRESET_BANK1_VOLTAGE": {
-            "value": "LVCMOS 1.8V"
+            "value": "HSTL 1.8V"
           },
           "PCW_QSPI_PERIPHERAL_CLKSRC": {
             "value": "IO PLL"
