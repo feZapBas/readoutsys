@@ -1,0 +1,14 @@
+11:18:33 DEBUG : Logs will be stored at '/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/IDE.log'.
+11:18:34 INFO  : Platform repository initialization has completed.
+11:18:34 INFO  : Launching XSCT server: xsct -n  -interactive /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/temp_xsdb_launch_script.tcl
+11:18:34 INFO  : Registering command handlers for Vitis TCF services
+11:18:36 INFO  : XSCT server has started successfully.
+11:18:36 INFO  : plnx-install-location is set to ''
+11:18:36 INFO  : Successfully done setting XSCT server connection channel  
+11:18:36 INFO  : Successfully done query RDI_DATADIR 
+11:18:36 INFO  : Successfully done setting workspace for the tool. 
+11:19:57 INFO  : Result from executing command 'getProjects': rtos_sys_wrapper
+11:19:57 INFO  : Result from executing command 'getPlatforms': 
+11:19:57 WARN  : An unexpected exception occurred in the module 'platform project logging'
+11:19:57 INFO  : Platform 'rtos_sys_wrapper' is added to custom repositories.
+11:20:03 INFO  : Platform 'rtos_sys_wrapper' is added to custom repositories.

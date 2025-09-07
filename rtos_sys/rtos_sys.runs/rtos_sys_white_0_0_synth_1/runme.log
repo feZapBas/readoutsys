@@ -1,0 +1,225 @@
+
+*** Running vivado
+    with args -log rtos_sys_white_0_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source rtos_sys_white_0_0.tcl
+
+
+****** Vivado v2024.2 (64-bit)
+  **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
+  **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
+  **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
+  **** Start of session at: Sat Sep  6 20:58:58 2025
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source rtos_sys_white_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/ip'.
+Command: synth_design -top rtos_sys_white_0_0 -part xc7z007sclg400-1 -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 39757
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1937.379 ; gain = 418.828 ; free physical = 11588 ; free virtual = 22982
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_white_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_white_0_0/synth/rtos_sys_white_0_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'white' [/media/ej3b/a1030d84-846f-4a15-9828-0951444df26f/home/ej3b/Music/project_3/andes_readout/andes_readout/andes_readout.srcs/sources_1/imports/new/white.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'white' (0#1) [/media/ej3b/a1030d84-846f-4a15-9828-0951444df26f/home/ej3b/Music/project_3/andes_readout/andes_readout/andes_readout.srcs/sources_1/imports/new/white.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_white_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_white_0_0/synth/rtos_sys_white_0_0.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2014.316 ; gain = 495.766 ; free physical = 11435 ; free virtual = 22848
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2032.129 ; gain = 513.578 ; free physical = 11431 ; free virtual = 22845
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2032.129 ; gain = 513.578 ; free physical = 11431 ; free virtual = 22845
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2032.129 ; gain = 0.000 ; free physical = 11438 ; free virtual = 22852
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2136.867 ; gain = 0.000 ; free physical = 11463 ; free virtual = 22875
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2136.867 ; gain = 0.000 ; free physical = 11463 ; free virtual = 22875
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2136.867 ; gain = 618.316 ; free physical = 11462 ; free virtual = 22843
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2144.871 ; gain = 626.320 ; free physical = 11462 ; free virtual = 22843
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 2144.871 ; gain = 626.320 ; free physical = 11462 ; free virtual = 22843
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 2144.871 ; gain = 626.320 ; free physical = 11462 ; free virtual = 22844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+INFO: [Synth 8-3917] design rtos_sys_white_0_0 has port axis_tkeep[7] driven by constant 0
+INFO: [Synth 8-3917] design rtos_sys_white_0_0 has port axis_tkeep[6] driven by constant 0
+INFO: [Synth 8-3917] design rtos_sys_white_0_0 has port axis_tkeep[5] driven by constant 0
+INFO: [Synth 8-3917] design rtos_sys_white_0_0 has port axis_tkeep[4] driven by constant 0
+INFO: [Synth 8-3917] design rtos_sys_white_0_0 has port axis_tkeep[3] driven by constant 1
+INFO: [Synth 8-3917] design rtos_sys_white_0_0 has port axis_tkeep[2] driven by constant 1
+INFO: [Synth 8-3917] design rtos_sys_white_0_0 has port axis_tkeep[1] driven by constant 1
+INFO: [Synth 8-3917] design rtos_sys_white_0_0 has port axis_tkeep[0] driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2144.871 ; gain = 626.320 ; free physical = 11449 ; free virtual = 22810
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2176.871 ; gain = 658.320 ; free physical = 10933 ; free virtual = 22292
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2176.871 ; gain = 658.320 ; free physical = 10933 ; free virtual = 22292
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2195.902 ; gain = 677.352 ; free physical = 10909 ; free virtual = 22268
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2355.715 ; gain = 837.164 ; free physical = 12219 ; free virtual = 23577
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2355.715 ; gain = 837.164 ; free physical = 12235 ; free virtual = 23593
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2355.715 ; gain = 837.164 ; free physical = 12258 ; free virtual = 23616
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2355.715 ; gain = 837.164 ; free physical = 12274 ; free virtual = 23632
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2355.715 ; gain = 837.164 ; free physical = 12281 ; free virtual = 23639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2355.715 ; gain = 837.164 ; free physical = 12281 ; free virtual = 23639
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     8|
+|2     |LUT1   |     2|
+|3     |LUT2   |     1|
+|4     |LUT4   |     5|
+|5     |LUT5   |     5|
+|6     |FDRE   |    33|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2355.715 ; gain = 837.164 ; free physical = 12281 ; free virtual = 23639
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 2355.715 ; gain = 732.426 ; free physical = 12286 ; free virtual = 23647
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:20 . Memory (MB): peak = 2355.723 ; gain = 837.164 ; free physical = 12286 ; free virtual = 23647
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2355.723 ; gain = 0.000 ; free physical = 12284 ; free virtual = 23651
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2411.742 ; gain = 0.000 ; free physical = 13855 ; free virtual = 25227
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: a7f3742
+INFO: [Common 17-83] Releasing license: Synthesis
+30 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:29 . Memory (MB): peak = 2411.742 ; gain = 978.707 ; free physical = 13850 ; free virtual = 25222
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1576.019; main = 1417.610; forked = 208.394
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3246.891; main = 2411.746; forked = 916.984
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2435.754 ; gain = 0.000 ; free physical = 13847 ; free virtual = 25219
+INFO: [Common 17-1381] The checkpoint '/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/rtos_sys_white_0_0_synth_1/rtos_sys_white_0_0.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file rtos_sys_white_0_0_utilization_synth.rpt -pb rtos_sys_white_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sat Sep  6 20:59:37 2025...

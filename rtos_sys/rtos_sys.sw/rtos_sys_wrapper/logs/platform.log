@@ -1,0 +1,1443 @@
+TRACE::2025-09-07.11:19:52::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:52::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:52::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:52::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:52::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:52::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:52::SCWPlatform::Do not have an existing db opened. 
+TRACE::2025-09-07.11:19:53::SCWPlatform::Opened new HwDB with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	""
+}
+TRACE::2025-09-07.11:19:53::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rtos_sys_wrapper",
+	"systems":	[{
+			"systemName":	"rtos_sys_wrapper",
+			"systemDesc":	"rtos_sys_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rtos_sys_wrapper"
+		}]
+}
+TRACE::2025-09-07.11:19:53::SCWPlatform::Boot application domains not present, creating them
+TRACE::2025-09-07.11:19:53::SCWDomain::checking for install qemu data   : 
+TRACE::2025-09-07.11:19:53::SCWDomain:: Using the QEMU Data from install at  : /media/ej3b/PROGRAMS/tool/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2025-09-07.11:19:53::SCWDomain:: Using the QEMU args  from install at  : /media/ej3b/PROGRAMS/tool/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2025-09-07.11:19:53::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:53::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:53::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:53::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:53::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:53::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:53::SCWPlatform::Boot application domain added for zynq_fsbl
+TRACE::2025-09-07.11:19:53::SCWPlatform::Generating the sources  .
+TRACE::2025-09-07.11:19:53::SCWBDomain::Generating boot domain sources.
+TRACE::2025-09-07.11:19:53::SCWBDomain:: Generating the zynq_fsbl Application.
+TRACE::2025-09-07.11:19:53::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:53::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:53::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:53::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:53::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:53::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-09-07.11:19:53::SCWMssOS::No sw design opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:53::SCWMssOS::mss does not exists at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:53::SCWMssOS::Creating sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:53::SCWMssOS::Adding the swdes entry, created swdb /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:53::SCWMssOS::updating the scw layer changes to swdes at   /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:53::SCWMssOS::Writing mss at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:53::SCWMssOS::Completed writing the mss file at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-09-07.11:19:53::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2025-09-07.11:19:53::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2025-09-07.11:19:53::SCWBDomain::Completed writing the mss file at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp
+TRACE::2025-09-07.11:19:57::SCWPlatform::Generating sources Done.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2025-09-07.11:19:57::SCWMssOS::No sw design opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::mss exists loading the mss file  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Opened the sw design from mss  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Adding the swdes entry /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss with des name system
+TRACE::2025-09-07.11:19:57::SCWMssOS::updating the scw layer about changes
+TRACE::2025-09-07.11:19:57::SCWMssOS::Opened the sw design.  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rtos_sys_wrapper",
+	"systems":	[{
+			"systemName":	"rtos_sys_wrapper",
+			"systemDesc":	"rtos_sys_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rtos_sys_wrapper",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"55b06356d64acda5c0b405ae161b50c7",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rtos_sys_wrapper",
+	"systems":	[{
+			"systemName":	"rtos_sys_wrapper",
+			"systemDesc":	"rtos_sys_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rtos_sys_wrapper",
+			"sysActiveDom":	"zynq_fsbl",
+			"sysDefaultDom":	"",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"55b06356d64acda5c0b405ae161b50c7",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWDomain::checking for install qemu data   : 
+TRACE::2025-09-07.11:19:57::SCWDomain:: Using the QEMU Data from install at  : /media/ej3b/PROGRAMS/tool/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/
+TRACE::2025-09-07.11:19:57::SCWDomain:: Using the QEMU args  from install at  : /media/ej3b/PROGRAMS/tool/Vitis/2024.2/data/emulation/platforms/zynq/sw/a9_standalone/qemu/qemu_args.txt
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWDomain::Qemu Directory name is changed from "" to "qemu"
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::No sw design opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::mss does not exists at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Creating sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Adding the swdes entry, created swdb /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss with des name /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::updating the scw layer changes to swdes at   /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Writing mss at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writing the mss file at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp
+TRACE::2025-09-07.11:19:57::SCWMssOS::Picking up changes from newly written mss file into SCW Layer. 
+TRACE::2025-09-07.11:19:57::SCWMssOS::Updated the changes from newly written mss file into SCW Layer. 
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writing the mss file at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp
+TRACE::2025-09-07.11:19:57::SCWMssOS::Forcing BSP Sources regeneration.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Adding the swdes entry, mss present, able to open swdb /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss with des name system_0
+TRACE::2025-09-07.11:19:57::SCWMssOS::Writing the mss file completed /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rtos_sys_wrapper",
+	"systems":	[{
+			"systemName":	"rtos_sys_wrapper",
+			"systemDesc":	"rtos_sys_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rtos_sys_wrapper",
+			"sysActiveDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"sysDefaultDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"55b06356d64acda5c0b405ae161b50c7",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDispName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDesc":	"freertos10_xilinx_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"freertos10_xilinx",
+					"sdxOs":	"freertos10_xilinx",
+					"qemuArgs":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"1.16",
+					"mssFile":	"",
+					"md5Digest":	"a63f1d95c34154c2b94d503442b73826",
+					"compatibleApp":	"freertos_hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xiltimer:2.1"],
+					"libOptions":	{
+						"freertos10_xilinx":	{
+							"xil_interrupt":	"true",
+							"libOptionNames":	["xil_interrupt"]
+						},
+						"libsContainingOptions":	["freertos10_xilinx"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-09-07.11:19:57::SCWPlatform::Started generating the artifacts platform rtos_sys_wrapper
+TRACE::2025-09-07.11:19:57::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-09-07.11:19:57::SCWPlatform::Started generating the artifacts for system configuration rtos_sys_wrapper
+LOG::2025-09-07.11:19:57::SCWSystem::Checking the domain zynq_fsbl
+LOG::2025-09-07.11:19:57::SCWSystem::Doing application build for :  zynq_fsbl
+TRACE::2025-09-07.11:19:57::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2025-09-07.11:19:57::SCWDomain::Skipping the build for domain :  zynq_fsbl
+LOG::2025-09-07.11:19:57::SCWSystem::Checking the domain freertos10_xilinx_ps7_cortexa9_0
+LOG::2025-09-07.11:19:57::SCWSystem::Not a boot domain 
+LOG::2025-09-07.11:19:57::SCWSystem::Started Processing the domain freertos10_xilinx_ps7_cortexa9_0
+TRACE::2025-09-07.11:19:57::SCWDomain::Generating domain artifcats
+TRACE::2025-09-07.11:19:57::SCWMssOS::Generating standalone artifcats
+TRACE::2025-09-07.11:19:57::SCWMssOS::Copying the qemu file from  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt To /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/export/rtos_sys_wrapper/sw/rtos_sys_wrapper/qemu/
+TRACE::2025-09-07.11:19:57::SCWMssOS::Copying the qemu file from  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt To /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/export/rtos_sys_wrapper/sw/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu/
+TRACE::2025-09-07.11:19:57::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writing the mss file at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp
+TRACE::2025-09-07.11:19:57::SCWMssOS::Mss edits present, copying mssfile into export location /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-09-07.11:19:57::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-09-07.11:19:57::SCWDomain::Skipping the build for domain :  freertos10_xilinx_ps7_cortexa9_0
+TRACE::2025-09-07.11:19:57::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-09-07.11:19:57::SCWMssOS::Copying to export directory.
+TRACE::2025-09-07.11:19:57::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-09-07.11:19:57::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2025-09-07.11:19:57::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2025-09-07.11:19:57::SCWSystem::Completed Processing the domain freertos10_xilinx_ps7_cortexa9_0
+LOG::2025-09-07.11:19:57::SCWSystem::Completed Processing the sysconfig rtos_sys_wrapper
+LOG::2025-09-07.11:19:57::SCWPlatform::Completed generating the artifacts for system configuration rtos_sys_wrapper
+TRACE::2025-09-07.11:19:57::SCWPlatform::Started preparing the platform 
+TRACE::2025-09-07.11:19:57::SCWSystem::Writing the bif file for system config rtos_sys_wrapper
+TRACE::2025-09-07.11:19:57::SCWSystem::dir created 
+TRACE::2025-09-07.11:19:57::SCWSystem::Writing the bif 
+TRACE::2025-09-07.11:19:57::SCWPlatform::Started writing the spfm file 
+TRACE::2025-09-07.11:19:57::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-09-07.11:19:57::SCWPlatform::Completed generating the platform
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rtos_sys_wrapper",
+	"systems":	[{
+			"systemName":	"rtos_sys_wrapper",
+			"systemDesc":	"rtos_sys_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rtos_sys_wrapper",
+			"sysActiveDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"sysDefaultDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"55b06356d64acda5c0b405ae161b50c7",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDispName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDesc":	"freertos10_xilinx_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"freertos10_xilinx",
+					"sdxOs":	"freertos10_xilinx",
+					"qemuArgs":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"1.16",
+					"mssFile":	"",
+					"md5Digest":	"a63f1d95c34154c2b94d503442b73826",
+					"compatibleApp":	"freertos_hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xiltimer:2.1"],
+					"libOptions":	{
+						"freertos10_xilinx":	{
+							"xil_interrupt":	"true",
+							"libOptionNames":	["xil_interrupt"]
+						},
+						"libsContainingOptions":	["freertos10_xilinx"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-09-07.11:19:57::SCWPlatform::updated the xpfm file.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rtos_sys_wrapper",
+	"systems":	[{
+			"systemName":	"rtos_sys_wrapper",
+			"systemDesc":	"rtos_sys_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rtos_sys_wrapper",
+			"sysActiveDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"sysDefaultDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"55b06356d64acda5c0b405ae161b50c7",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDispName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDesc":	"freertos10_xilinx_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"freertos10_xilinx",
+					"sdxOs":	"freertos10_xilinx",
+					"qemuArgs":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"1.16",
+					"mssFile":	"",
+					"md5Digest":	"a63f1d95c34154c2b94d503442b73826",
+					"compatibleApp":	"freertos_hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xiltimer:2.1"],
+					"libOptions":	{
+						"freertos10_xilinx":	{
+							"xil_interrupt":	"true",
+							"libOptionNames":	["xil_interrupt"]
+						},
+						"libsContainingOptions":	["freertos10_xilinx"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rtos_sys_wrapper",
+	"systems":	[{
+			"systemName":	"rtos_sys_wrapper",
+			"systemDesc":	"rtos_sys_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rtos_sys_wrapper",
+			"sysActiveDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"sysDefaultDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"55b06356d64acda5c0b405ae161b50c7",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDispName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDesc":	"freertos10_xilinx_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"freertos10_xilinx",
+					"sdxOs":	"freertos10_xilinx",
+					"qemuArgs":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"1.16",
+					"mssFile":	"",
+					"md5Digest":	"a63f1d95c34154c2b94d503442b73826",
+					"compatibleApp":	"freertos_hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xiltimer:2.1"],
+					"libOptions":	{
+						"freertos10_xilinx":	{
+							"xil_interrupt":	"true",
+							"libOptionNames":	["xil_interrupt"]
+						},
+						"libsContainingOptions":	["freertos10_xilinx"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+LOG::2025-09-07.11:19:57::SCWPlatform::Started generating the artifacts platform rtos_sys_wrapper
+TRACE::2025-09-07.11:19:57::SCWPlatform::Sanity checking of platform is completed
+LOG::2025-09-07.11:19:57::SCWPlatform::Started generating the artifacts for system configuration rtos_sys_wrapper
+LOG::2025-09-07.11:19:57::SCWSystem::Started Processing the domain freertos10_xilinx_ps7_cortexa9_0
+TRACE::2025-09-07.11:19:57::SCWDomain::Generating domain artifcats
+TRACE::2025-09-07.11:19:57::SCWMssOS::Generating standalone artifcats
+TRACE::2025-09-07.11:19:57::SCWMssOS::Copying the qemu file from  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt To /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/export/rtos_sys_wrapper/sw/rtos_sys_wrapper/qemu/
+TRACE::2025-09-07.11:19:57::SCWMssOS::Copying the qemu file from  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt To /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/export/rtos_sys_wrapper/sw/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu/
+TRACE::2025-09-07.11:19:57::SCWMssOS:: Copying the user libraries. 
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writing the mss file at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp
+TRACE::2025-09-07.11:19:57::SCWMssOS::Mss edits present, copying mssfile into export location /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2025-09-07.11:19:57::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2025-09-07.11:19:57::SCWDomain::Building the domain as part of full build :  freertos10_xilinx_ps7_cortexa9_0
+TRACE::2025-09-07.11:19:57::SCWMssOS::skipping the bsp build ... 
+TRACE::2025-09-07.11:19:57::SCWMssOS::Copying to export directory.
+TRACE::2025-09-07.11:19:57::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2025-09-07.11:19:57::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+TRACE::2025-09-07.11:19:57::SCWMssOS:: Completed Standalone Artifacts creation 
+LOG::2025-09-07.11:19:57::SCWSystem::Completed Processing the domain freertos10_xilinx_ps7_cortexa9_0
+LOG::2025-09-07.11:19:57::SCWSystem::Completed Processing the sysconfig rtos_sys_wrapper
+LOG::2025-09-07.11:19:57::SCWPlatform::Completed generating the artifacts for system configuration rtos_sys_wrapper
+TRACE::2025-09-07.11:19:57::SCWPlatform::Started preparing the platform 
+TRACE::2025-09-07.11:19:57::SCWSystem::Writing the bif file for system config rtos_sys_wrapper
+TRACE::2025-09-07.11:19:57::SCWSystem::dir created 
+TRACE::2025-09-07.11:19:57::SCWSystem::Writing the bif 
+TRACE::2025-09-07.11:19:57::SCWPlatform::Started writing the spfm file 
+TRACE::2025-09-07.11:19:57::SCWPlatform::Started writing the xpfm file 
+TRACE::2025-09-07.11:19:57::SCWPlatform::Completed generating the platform
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Saving the mss changes /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Completed writemss as part of save.
+TRACE::2025-09-07.11:19:57::SCWMssOS::Commit changes completed.
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to open the hw design at /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA given /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA absoulate path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform::DSA directory /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Platform Path /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/hw/rtos_sys_wrapper.xsa
+TRACE::2025-09-07.11:19:57::SCWPlatform:: Unique name xilinx:cora-z7-07s::0.0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Trying to set the existing hwdb with name rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Opened existing hwdb rtos_sys_wrapper_0
+TRACE::2025-09-07.11:19:57::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2025-09-07.11:19:57::SCWMssOS::Checking the sw design at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWMssOS::DEBUG:  swdes dump  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss|system_0||
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/zynq_fsbl/zynq_fsbl_bsp/system.mss|system||
+
+TRACE::2025-09-07.11:19:57::SCWMssOS::Sw design exists and opened at  /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos_sys_wrapper/ps7_cortexa9_0/freertos10_xilinx_ps7_cortexa9_0/bsp/system.mss
+TRACE::2025-09-07.11:19:57::SCWWriter::formatted JSON is {
+	"platformName":	"rtos_sys_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"rtos_sys_wrapper",
+	"platHandOff":	"/home/ej3b/readoutsys/rtos_sys/rtos_sys_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/rtos_sys_wrapper.xsa",
+	"deviceType":	"zynq",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"platFsblTarget":	"ps7_cortexa9_0",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP       -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"rtos_sys_wrapper",
+	"systems":	[{
+			"systemName":	"rtos_sys_wrapper",
+			"systemDesc":	"rtos_sys_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"rtos_sys_wrapper",
+			"sysActiveDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"sysDefaultDom":	"freertos10_xilinx_ps7_cortexa9_0",
+			"domains":	[{
+					"domainName":	"zynq_fsbl",
+					"domainDispName":	"zynq_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"9.2",
+					"mssFile":	"",
+					"md5Digest":	"55b06356d64acda5c0b405ae161b50c7",
+					"compatibleApp":	"zynq_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:5.3", "xilrsa:1.8"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDispName":	"freertos10_xilinx_ps7_cortexa9_0",
+					"domainDesc":	"freertos10_xilinx_ps7_cortexa9_0",
+					"processors":	"ps7_cortexa9_0",
+					"os":	"freertos10_xilinx",
+					"sdxOs":	"freertos10_xilinx",
+					"qemuArgs":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu_args.txt",
+					"qemuData":	"<platformDir>/resources/rtos_sys_wrapper/freertos10_xilinx_ps7_cortexa9_0/qemu",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"1.16",
+					"mssFile":	"",
+					"md5Digest":	"a63f1d95c34154c2b94d503442b73826",
+					"compatibleApp":	"freertos_hello_world",
+					"domType":	"mssDomain",
+					"arch":	"32-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xiltimer:2.1"],
+					"libOptions":	{
+						"freertos10_xilinx":	{
+							"xil_interrupt":	"true",
+							"libOptionNames":	["xil_interrupt"]
+						},
+						"libsContainingOptions":	["freertos10_xilinx"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2025-09-07.11:19:57::SCWPlatform::updated the xpfm file.
