@@ -719,3 +719,43 @@ con
 18:28:56 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
 18:30:04 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
 18:36:05 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
+18:49:10 ERROR : XSCT server calls should not be made from TCF thread.
+java.lang.RuntimeException: XSCT server calls should not be made from TCF thread.
+	at com.xilinx.sdk.xsdb.XSDBCommandManager.issueAndWait(XSDBCommandManager.java:392) [com.xilinx.sdk.xsdb_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdk.xsdb.XsdbCommandUtils.executeAndRespond(XsdbCommandUtils.java:325) [com.xilinx.sdk.xsdb_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.populateDesignProps(HwPlatform.java:521) [com.xilinx.sdk.hw_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.isZynq(HwPlatform.java:1101) [com.xilinx.sdk.hw_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdk.hw.internal.HwPlatform.getArchFamily(HwPlatform.java:587) [com.xilinx.sdk.hw_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readCrossTriggerModel(BaseLaunchConfigModel.java:174) [com.xilinx.sdk.tcf.debug_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdk.tcf.internal.debug.ui.common.BaseLaunchConfigModel.readAndSetAttributes(BaseLaunchConfigModel.java:156) [com.xilinx.sdk.tcf.debug_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.ui.SdsLaunchConfigModel.newInstance(SdsLaunchConfigModel.java:109) [com.xilinx.sdx.sdsoc.debug.ui_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.createConfigModel(SdsTcfLaunchDelegate.java:85) [com.xilinx.sdx.sdsoc.debug_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.generateReports(SdsTcfLaunchDelegate.java:641) [com.xilinx.sdx.sdsoc.debug_1.0.0.202411031917.jar:?]
+	at com.xilinx.sdx.sdsoc.debug.launch.SdsTcfLaunchDelegate.onDisconnected(SdsTcfLaunchDelegate.java:615) [com.xilinx.sdx.sdsoc.debug_1.0.0.202411031917.jar:?]
+	at org.eclipse.tcf.internal.debug.ui.model.TCFModelManager$1.onDisconnected(TCFModelManager.java:79) [org.eclipse.tcf.debug.ui_1.7.0.202411031917.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch.onDisconnected(TCFLaunch.java:532) [org.eclipse.tcf.debug_1.7.0.202411031917.jar:?]
+	at org.eclipse.tcf.internal.debug.model.TCFLaunch$43.onChannelClosed(TCFLaunch.java:1643) [org.eclipse.tcf.debug_1.7.0.202411031917.jar:?]
+	at org.eclipse.tcf.core.AbstractChannel$9.run(AbstractChannel.java:858) [org.eclipse.tcf.core_1.7.0.202411031917.jar:?]
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:98) [org.eclipse.tcf_1.7.0.202411031917.jar:?]
+	at java.lang.Thread.run(Thread.java:829) [?:?]
+18:49:10 WARN  : channel "tcfchan#11" closed
+09:22:21 DEBUG : Logs will be stored at '/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/IDE.log'.
+09:22:21 INFO  : Launching XSCT server: xsct -n  -interactive /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/temp_xsdb_launch_script.tcl
+09:22:23 INFO  : Platform repository initialization has completed.
+09:22:23 INFO  : Registering command handlers for Vitis TCF services
+09:22:24 INFO  : XSCT server has started successfully.
+09:22:25 INFO  : Successfully done setting XSCT server connection channel  
+09:22:25 INFO  : plnx-install-location is set to ''
+09:22:25 INFO  : Successfully done query RDI_DATADIR 
+09:22:25 INFO  : Successfully done setting workspace for the tool. 
+09:30:40 INFO  : Result from executing command 'getProjects': rtos2
+09:30:40 INFO  : Result from executing command 'getPlatforms': rtos2|/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/rtos2.xpfm
+09:30:44 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
+09:59:51 INFO  : Result from executing command 'getProjects': rtos2
+09:59:51 INFO  : Result from executing command 'getPlatforms': rtos2|/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/rtos2.xpfm
+09:59:54 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
+10:03:48 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
+10:04:26 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
+10:05:27 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
+10:06:41 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...
+10:06:51 INFO  : Checking for BSP changes to sync application flags for project 'lwip_server'...

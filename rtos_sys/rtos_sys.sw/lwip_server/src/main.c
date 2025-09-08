@@ -56,9 +56,6 @@ XUartPs UartPs;
 XDmaPs Dma;
 XScuGic Intc;
 
-// Semáforo para sincronización con FreeRTOS
-SemaphoreHandle_t xDmaRxSemaphore;
-
 #define UART_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID
 #define DMA_DEVICE_ID XPAR_XDMAPS_0_DEVICE_ID
 #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
@@ -259,117 +256,15 @@ void main_thread(void *p)
 	return;
 }
 
-
-
-
-int SetupUartDma(void) {
-    XUartPs_Config *UartConfig;
-    XDmaPs_Config *DmaConfig;
-    XScuGic_Config *IntcConfig;
-    int Status;
-
-    // Inicializar GIC
-    IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
-    if (IntcConfig == NULL) return XST_FAILURE;
-    Status = XScuGic_CfgInitialize(&Intc, IntcConfig, IntcConfig->CpuBaseAddress);
-    if (Status != XST_SUCCESS) return Status;
-
-    // Inicializar UART
-    UartConfig = XUartPs_LookupConfig(UART_DEVICE_ID);
-    if (UartConfig == NULL) return XST_FAILURE;
-    Status = XUartPs_CfgInitialize(&UartPs, UartConfig, UartConfig->BaseAddress);
-    if (Status != XST_SUCCESS) return Status;
-    XUartPs_SetBaudRate(&UartPs, 115200);
-
-    // Habilitar FIFO y DMA en UART
-    XUartPs_SetOperMode(&UartPs, XUARTPS_OPER_MODE_NORMAL);
-    XUartPs_SetFifoThreshold(&UartPs, 1);
-
-    // Inicializar DMA
-    DmaConfig = XDmaPs_LookupConfig(DMA_DEVICE_ID);
-    if (DmaConfig == NULL) return XST_FAILURE;
-    Status = XDmaPs_CfgInitialize(&Dma, DmaConfig, DmaConfig->BaseAddress);
-    if (Status != XST_SUCCESS) return Status;
-
-    // Configurar interrupción de DMA
-    XScuGic_Connect(&Intc, DMA_DONE_INT_ID, (XInterruptHandler)XDmaPs_DoneISR_0, &Dma);
-    XScuGic_Enable(&Intc, DMA_DONE_INT_ID);
-
-    // Crear semáforo para FreeRTOS
-    xDmaRxSemaphore = xSemaphoreCreateBinary();
-    if (xDmaRxSemaphore == NULL) return XST_FAILURE;
-
-    return XST_SUCCESS;
-}
-
-void SetupInterrupts(void) {
-    Xil_ExceptionInit();
-    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
-                                 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
-                                 &Intc);
-    Xil_ExceptionEnable();
-}
-
-void StartDmaTransfer(void) {
-    XDmaPs_Cmd DmaCmd;
-    memset(&DmaCmd, 0, sizeof(XDmaPs_Cmd));
-
-    // Configurar direcciones en el Buffer Descriptor
-    DmaCmd.BD.SrcAddr = XPAR_XUARTPS_0_BASEADDR + XUARTPS_FIFO_OFFSET;
-    DmaCmd.BD.DstAddr = (u32)rxBuffer;
-    DmaCmd.BD.Length = BUFFER_SIZE;
-
-    // Configurar control del canal
-    DmaCmd.ChanCtrl.SrcBurstSize = 1;
-    DmaCmd.ChanCtrl.SrcInc = 0;
-    DmaCmd.ChanCtrl.DstBurstSize = 1;
-    DmaCmd.ChanCtrl.DstInc = 1;
-    DmaCmd.ChanCtrl.SrcLite = 0;
-    DmaCmd.ChanCtrl.DstLite = 0;
-
-    // Iniciar transferencia DMA
-    XDmaPs_Start(&Dma, 0, &DmaCmd, 0);
-}
-
-void XDmaPs_DoneISR_0(XDmaPs *InstPtr) {
-    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-
-    // Notificar a la tarea
-    xSemaphoreGiveFromISR(xDmaRxSemaphore, &xHigherPriorityTaskWoken);
-
-    // Limpiar la interrupción
-    XDmaPs_WriteReg(InstPtr->Config.BaseAddress, XDMAPS_INTCLR_OFFSET, XDMAPS_IXR_DONE_MASK_0);
-
-    // Solicitar cambio de contexto si es necesario
-    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
-}
-
-void vDmaTask(void *pvParameters) {
-    for (;;) {
-        if (xSemaphoreTake(xDmaRxSemaphore, portMAX_DELAY) == pdTRUE) {
-            // Procesar datos en rxBuffer
-            for (uint32_t i = 0; i < BUFFER_SIZE; i++) {
-                xil_printf("Dato recibido: %c\n", rxBuffer[i]);
-            }
-            // Reiniciar transferencia DMA
-            StartDmaTransfer();
-        }
-    }
-}
-
 int main(void) {
-    // Inicializar UART y DMA
-    if (SetupUartDma() != XST_SUCCESS) {
-        xil_printf("Error inicializando UART y DMA\r\n");
+    // Inicializar DMA y GPIO
+    if (dma_initialization() != XST_SUCCESS) {
+        xil_printf("DMA initialization failed!\r\n");
         while (1);
     }
-    SetupInterrupts();
 
-    // Crear tarea para manejar datos DMA
-    xTaskCreate(vDmaTask, "DmaTask", 128, NULL, 2, NULL);
-
-    // Iniciar transferencia DFA
-    StartDmaTransfer();
+    // Crear tarea DMA (sin tpcb por ahora, ajusta si necesitas lwIP)
+    xTaskCreate(vDmaTask, "DmaTask", 256, NULL, 2, NULL);
 
     // Crear tarea de red
     main_thread_handle = sys_thread_new("main_thread", main_thread, 0,

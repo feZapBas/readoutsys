@@ -23,3 +23,7 @@ platform generate
 catch {platform remove rtos_sys_wrapper}
 bsp reload
 platform generate -domains 
+platform generate
+platform active {rtos2}
+bsp reload
+platform generate -domains 
