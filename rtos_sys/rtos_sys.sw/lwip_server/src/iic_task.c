@@ -4,7 +4,7 @@
 #include "xil_printf.h"
 #include "xscugic.h"
 #include "xiicps.h"
-#include "sleep.h"           /* si usas usleep (reemplazado por vTaskDelay) */
+#include "sleep.h"
 
 #include "FreeRTOS.h"
 #include "task.h"
@@ -16,17 +16,15 @@
 #define IIC_SLAVE_ADDR      0x20
 #define IIC_SCLK_RATE       10000
 
-/* Prototipos locales */
 static void IicTask(void *pvParameters);
 static int init_iic(void);
 static int SetupInterruptSystem_iic(XIicPs *IicPsPtr);
 void I2C_InterruptHandler(void *CallBackRef, u32 Event);
 
-/* Instancias driver / flags */
 static XIicPs IicInstance;
 static XIicPs_Config *ConfigPtr;
-static XScuGic InterruptController; /* si lo necesitas global */
-static XScuGic_Config *GicConfig;
+extern XScuGic InterruptController;
+extern XScuGic_Config *GicConfig;
 
 static volatile u32 SendComplete;
 static volatile u32 RecvComplete;
@@ -34,11 +32,10 @@ static volatile u32 TotalErrorCount;
 static volatile u32 NACKreceive;
 u8 buffer_config [1024];
 /* FreeRTOS primitives */
-static SemaphoreHandle_t xIicEventSem; /* liberado por ISR cuando Send/Recv complete */
+static SemaphoreHandle_t xIicEventSem;
 
 u8 FirstBuffer[3];
 
-/* StartIICTask: crea la tarea y semáforo */
 BaseType_t StartIICTask(void)
 {
     xIicEventSem = xSemaphoreCreateBinary();
@@ -50,7 +47,6 @@ BaseType_t StartIICTask(void)
     return xTaskCreate(IicTask, "IIC_TASK", 4096, NULL, tskIDLE_PRIORITY + 2, NULL);
 }
 
-/* Tarea principal que realiza la configuración I2C */
 static void IicTask(void *pvParameters)
 {
     (void) pvParameters;
@@ -64,9 +60,8 @@ static void IicTask(void *pvParameters)
         vTaskDelete(NULL);
     }
 
-    /* configura handler y sistema de interrupciones */
-    /* Registra el callback de status (nombre de la función puede variar con BSP) */
-    XIicPs_SetStatusHandler(&IicInstance, &IicInstance, (*XIicPs_Handler)I2C_InterruptHandler);
+    XIicPs_SetStatusHandler(&IicInstance, &IicInstance, (XIicPs_IntrHandler)I2C_InterruptHandler);
+
 
     status = SetupInterruptSystem_iic(&IicInstance);
     if (status != XST_SUCCESS) {
@@ -77,24 +72,18 @@ static void IicTask(void *pvParameters)
     /* Set clock */
     XIicPs_SetSClk(&IicInstance, IIC_SCLK_RATE);
 
-    /* ---------- Comienza tu flujo original adaptado a FreeRTOS ---------- */
-
-    /* Prepara FirstBuffer (como en tu código) */
     FirstBuffer[0] = 0x06;
     FirstBuffer[1] = 0x00; /* CONFIG_P0 */
     FirstBuffer[2] = 0xF1; /* CONFIG_P1 */
 
-    /* Ejemplo de recepción previa */
     {
         u8 datasop[3];
         RecvComplete = FALSE;
         NACKreceive = FALSE;
         SendComplete = FALSE;
 
-        /* Lanza una recepción no bloqueante (el driver notificará vía ISR) */
         XIicPs_MasterRecv(&IicInstance, datasop, 3, IIC_SLAVE_ADDR);
 
-        /* Espera que la ISR libere el semáforo o timeout */
         if (xSemaphoreTake(xIicEventSem, pdMS_TO_TICKS(200)) == pdTRUE) {
             xil_printf("Received: ");
             for (int i=0; i<3; ++i) xil_printf("%02X ", datasop[i]);
@@ -104,7 +93,6 @@ static void IicTask(void *pvParameters)
         }
     }
 
-    /* Envío de configuración */
     {
         SendComplete = FALSE;
         XIicPs_MasterSend(&IicInstance, FirstBuffer, 3, IIC_SLAVE_ADDR);
@@ -116,7 +104,6 @@ static void IicTask(void *pvParameters)
         }
     }
 
-    /* Lectura adicional y carga de buffer */
     {
         u8 datasop[3];
         RecvComplete = FALSE;
@@ -129,7 +116,6 @@ static void IicTask(void *pvParameters)
         }
     }
 
-    /* Enviar bloque por bloque (adaptado), usando vTaskDelay en vez de usleep */
     for (int contador = 0; contador < 252; contador++) {
         u8 bufer[9];
         bufer[0] =  0x02;
@@ -144,18 +130,16 @@ static void IicTask(void *pvParameters)
 
         XIicPs_MasterSend(&IicInstance, bufer , 9, IIC_SLAVE_ADDR);
 
-        /* Espera por confirmación o timeout */
         if (xSemaphoreTake(xIicEventSem, pdMS_TO_TICKS(100)) == pdTRUE) {
             /* ok */
         } else {
             xil_printf("Timeout sending block %d\r\n", contador);
         }
 
-        /* small delay (20 us in tu código). vTaskDelay mínimo es 1 tick; si tick=1ms, approximamos */
-        vTaskDelay(pdMS_TO_TICKS(1)); /* 1 ms approximación */
+
+        vTaskDelay(pdMS_TO_TICKS(1));
     }
 
-    /* ld_buffer final */
     {
         u8 ld_buffer[7];
         ld_buffer[0] = 0x02;
@@ -175,11 +159,9 @@ static void IicTask(void *pvParameters)
 
     xil_printf("Configuration to ANDESPix successful\r\n");
 
-    /* Fin de la tarea: quedamos en bucle o eliminamos la tarea */
     vTaskDelete(NULL);
 }
 
-/* Inicializa XIicPs (igual que tu init_iic original) */
 static int init_iic(void) {
     xil_printf("LookupConfig...\r\n");
     ConfigPtr = XIicPs_LookupConfig(XPAR_XIICPS_0_DEVICE_ID);
@@ -200,7 +182,6 @@ static int init_iic(void) {
     return XST_SUCCESS;
 }
 
-/* Setup del GIC / interrupciones para IIC */
 static int SetupInterruptSystem_iic(XIicPs *IicPsPtr)
 {
     int Status;
@@ -219,13 +200,10 @@ static int SetupInterruptSystem_iic(XIicPs *IicPsPtr)
     if (Status != XST_SUCCESS) {
         return XST_FAILURE;
     }
-
-    /* Inicializa excepciones */
     Xil_ExceptionInit();
     Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &InterruptController);
     Xil_ExceptionEnable();
 
-    /* Conecta la IRQ del IIC al manejador provisto por el driver (XIicPs_MasterInterruptHandler) */
     Status = XScuGic_Connect(&InterruptController, IIC_INT_VEC_ID, (Xil_ExceptionHandler) XIicPs_MasterInterruptHandler, (void *)IicPsPtr);
     if (Status != XST_SUCCESS) {
         xil_printf("XScuGic_Connect failed\r\n");
@@ -236,7 +214,6 @@ static int SetupInterruptSystem_iic(XIicPs *IicPsPtr)
     return XST_SUCCESS;
 }
 
-/* Handler de eventos I2C -> libera semáforo para la tarea */
 void I2C_InterruptHandler(void *CallBackRef, u32 Event)
 {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
@@ -256,7 +233,6 @@ void I2C_InterruptHandler(void *CallBackRef, u32 Event)
             NACKreceive = TRUE;
             xil_printf("NACK Received\n");
         }
-        /* Otros errores informativos */
     }
 
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);

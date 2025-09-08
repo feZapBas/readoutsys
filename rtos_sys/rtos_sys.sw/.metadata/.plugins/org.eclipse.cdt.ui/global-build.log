@@ -1,23 +1,68 @@
 Nothing to build in platform 'rtos2'
 
-12:05:20 **** Incremental Build of configuration Debug for project lwip_server ****
+13:06:02 **** Incremental Build of configuration Debug for project lwip_server ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
  
 make --no-print-directory main-build
-Building file: ../src/iic_task.c
+Building file: ../src/dma_write.c
 Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_task.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/iic_task.d" -MT"src/iic_task.o" -o "src/iic_task.o" "../src/iic_task.c"
-../src/iic_task.c: In function 'IicTask':
-../src/iic_task.c:69:59: error: 'XIicPs_Handler' undeclared (first use in this function); did you mean 'XIicPs_IntrHandler'?
-   69 |     XIicPs_SetStatusHandler(&IicInstance, &IicInstance, (*XIicPs_Handler)I2C_InterruptHandler);
-      |                                                           ^~~~~~~~~~~~~~
-      |                                                           XIicPs_IntrHandler
-../src/iic_task.c:69:59: note: each undeclared identifier is reported only once for each function it appears in
-../src/iic_task.c:69:74: error: expected ')' before 'I2C_InterruptHandler'
-   69 |     XIicPs_SetStatusHandler(&IicInstance, &IicInstance, (*XIicPs_Handler)I2C_InterruptHandler);
-      |                            ~                                             ^~~~~~~~~~~~~~~~~~~~
-      |                                                                          )
-make[1]: *** [src/subdir.mk:35: src/iic_task.o] Error 1
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/dma_write.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/dma_write.d" -MT"src/dma_write.o" -o "src/dma_write.o" "../src/dma_write.c"
+../src/dma_write.c: In function 'dma_initialization':
+../src/dma_write.c:167:5: warning: implicit declaration of function 'XAxiDma_IntrSetCallback' [-Wimplicit-function-declaration]
+  167 |     XAxiDma_IntrSetCallback(&DMA0, XAXIDMA_DEVICE_TO_DMA, Dma0RxDoneCallback, NULL);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~
+../src/dma_write.c: In function 'vDmaTask':
+../src/dma_write.c:231:13: warning: implicit declaration of function 'dma_data_ready_callback' [-Wimplicit-function-declaration]
+  231 |             dma_data_ready_callback();  // Copia a test_buf si es necesario
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+../src/dma_write.c:235:9: warning: implicit declaration of function 'reset_gpio' [-Wimplicit-function-declaration]
+  235 |         reset_gpio();
+      |         ^~~~~~~~~~
+../src/dma_write.c:195:21: warning: unused variable 'tpcb' [-Wunused-variable]
+  195 |     struct tcp_pcb *tpcb = (struct tcp_pcb *)pvParameters;  // Asumiendo que pasas el pcb como parámetro
+      |                     ^~~~
+../src/dma_write.c: At top level:
+../src/dma_write.c:258:6: warning: conflicting types for 'reset_gpio'; have 'void(void)'
+  258 | void reset_gpio(void) {
+      |      ^~~~~~~~~~
+../src/dma_write.c:235:9: note: previous implicit declaration of 'reset_gpio' with type 'void(void)'
+  235 |         reset_gpio();
+      |         ^~~~~~~~~~
+../src/dma_write.c: In function 'dma_data_ready_callback':
+../src/dma_write.c:271:1: warning: control reaches end of non-void function [-Wreturn-type]
+  271 | }
+      | ^
+Finished building: ../src/dma_write.c
+ 
+Building target: lwip_server.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bsplib/lib -o "lwip_server.elf" ./src/dma_write.o ./src/freertos_tcp_perf_server.o ./src/iic_phyreset.o ./src/iic_task.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/dma_write.o: in function `InitInterrupts':
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:86:(.text+0x250): undefined reference to `IntcConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:86:(.text+0x254): undefined reference to `IntcConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:87:(.text+0x25c): undefined reference to `IntcConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:87:(.text+0x260): undefined reference to `IntcConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:91:(.text+0x278): undefined reference to `IntcConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/dma_write.o:/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:91: more undefined references to `IntcConfig' follow
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/dma_write.o: in function `dma_initialization':
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:167:(.text+0x694): undefined reference to `XAxiDma_IntrSetCallback'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:168:(.text+0x6b0): undefined reference to `XAxiDma_IntrSetCallback'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/iic_task.o: in function `SetupInterruptSystem_iic':
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:189:(.text+0x61c): undefined reference to `GicConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:189:(.text+0x620): undefined reference to `GicConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:190:(.text+0x628): undefined reference to `GicConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:190:(.text+0x62c): undefined reference to `GicConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:194:(.text+0x644): undefined reference to `GicConfig'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/iic_task.o:/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:194: more undefined references to `GicConfig' follow
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/iic_task.o: in function `SetupInterruptSystem_iic':
+/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:194:(.text+0x664): undefined reference to `InterruptController'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:194:(.text+0x668): undefined reference to `InterruptController'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:199:(.text+0x688): undefined reference to `InterruptController'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:199:(.text+0x68c): undefined reference to `InterruptController'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:204:(.text+0x6b0): undefined reference to `InterruptController'
+/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/iic_task.o:/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/iic_task.c:204: more undefined references to `InterruptController' follow
+collect2.real: error: ld returned 1 exit status
+make[1]: *** [makefile:43: lwip_server.elf] Error 1
 make: *** [makefile:34: all] Error 2

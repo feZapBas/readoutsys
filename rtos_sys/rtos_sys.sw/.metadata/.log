@@ -4762,3 +4762,192 @@ java.io.IOException: Network is unreachable
 
 !ENTRY com.xilinx.sdx.core 1 0 2025-09-08 12:05:20.747
 !MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:53:42.724
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:53:42.735
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:53:42.735
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:53:42.738
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.16",
+}]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-08 12:53:42.738
+!MESSAGE Generating MD5 hash for file: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:53:42.739
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:53:42.741
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-39: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-08 12:53:43.023
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:54:48.218
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:54:48.230
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:54:48.231
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:54:48.233
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.16",
+}]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-08 12:54:48.233
+!MESSAGE Generating MD5 hash for file: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:54:48.236
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 12:54:48.237
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-31: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-08 12:54:48.536
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:29.778
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:29.789
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:29.789
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:29.791
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.16",
+}]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-08 13:03:29.791
+!MESSAGE Generating MD5 hash for file: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:29.792
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:29.794
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-42: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-08 13:03:30.133
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:52.563
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:52.574
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:52.575
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:52.577
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.16",
+}]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-08 13:03:52.578
+!MESSAGE Generating MD5 hash for file: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:52.579
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:03:52.581
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-08 13:03:53.137
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:04:25.578
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:04:25.592
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:04:25.592
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:04:25.597
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.16",
+}]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-08 13:04:25.598
+!MESSAGE Generating MD5 hash for file: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:04:25.600
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:04:25.602
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-38: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-08 13:04:26.048
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:05:41.221
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Thread: Worker-44: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:05:41.230
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-44: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:05:41.231
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-44: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:05:41.237
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.16",
+}]. Thread: Worker-44: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-08 13:05:41.237
+!MESSAGE Generating MD5 hash for file: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:05:41.241
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-44: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:05:41.242
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-44: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-08 13:05:41.696
+!MESSAGE Build step failed, canceling full build chain.
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:06:02.317
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:06:02.324
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ], Result: [null, ]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:06:02.325
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:06:02.331
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, {"procname": "ps7_cortexa9_0",
+"osname": "freertos10_xilinx",
+"osver": "1.16",
+}]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2025-09-08 13:06:02.331
+!MESSAGE Generating MD5 hash for file: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:06:02.334
+!MESSAGE XSCT Command: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2025-09-08 13:06:02.337
+!MESSAGE XSCT command with result: [::hsi::utils::closesw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/system.mss], Result: [null, ]. Thread: Worker-43: Build Project
+
+!ENTRY com.xilinx.sdx.core 1 0 2025-09-08 13:06:02.777
+!MESSAGE Build step failed, canceling full build chain.

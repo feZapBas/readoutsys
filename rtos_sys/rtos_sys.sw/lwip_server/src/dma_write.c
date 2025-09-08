@@ -34,7 +34,7 @@ SemaphoreHandle_t xDma0Semaphore;
 SemaphoreHandle_t xDma1Semaphore;
 
 // Controlador de interrupciones
-XScuGic Intc;
+extern XScuGic Intc;
 #define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
 #define DMA0_RX_INTR_ID XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR
 #define DMA1_RX_INTR_ID XPAR_FABRIC_AXI_DMA_1_S2MM_INTROUT_INTR  // Ajusta según xparameters.h
@@ -80,7 +80,7 @@ void Dma1IntrHandler(void *CallbackRef) {
 
 // Inicialización de interrupciones
 int InitInterrupts(void) {
-    XScuGic_Config *IntcConfig;
+    extern XScuGic_Config *IntcConfig;
     int Status;
 
     IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
