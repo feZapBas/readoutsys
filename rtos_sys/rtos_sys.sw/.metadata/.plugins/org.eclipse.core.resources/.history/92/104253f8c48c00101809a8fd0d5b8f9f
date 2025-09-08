@@ -266,11 +266,6 @@ int main(void) {
     // Crear tarea DMA (sin tpcb por ahora, ajusta si necesitas lwIP)
     xTaskCreate(vDmaTask, "DmaTask", 256, NULL, 2, NULL);
 
-    /* Crea la tarea que maneja IIC */
-    if (StartIICTask() != pdPASS) {
-        xil_printf("Failed to create IIC task\r\n");
-        while(1);
-    }
     // Crear tarea de red
     main_thread_handle = sys_thread_new("main_thread", main_thread, 0,
                                        THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);

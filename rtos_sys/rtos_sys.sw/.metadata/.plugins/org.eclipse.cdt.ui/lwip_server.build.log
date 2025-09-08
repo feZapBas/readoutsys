@@ -1,19 +1,24 @@
-10:06:51 **** Incremental Build of configuration Debug for project lwip_server ****
+12:05:20 **** Incremental Build of configuration Debug for project lwip_server ****
 make all 
 make --no-print-directory pre-build
 a9-linaro-pre-build-step
  
 make --no-print-directory main-build
-Building target: lwip_server.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bsplib/lib -o "lwip_server.elf" ./src/dma_write.o ./src/freertos_tcp_perf_server.o ./src/iic_phyreset.o ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group -Wl,--start-group,-lxil,-llwip4,-lgcc,-lc,--end-group
-/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/main.o:/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/main.c:57: multiple definition of `Intc'; ./src/dma_write.o:/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:37: first defined here
-/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: ./src/dma_write.o: in function `dma_initialization':
-/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:167:(.text+0x670): undefined reference to `XAxiDma_IntrSetCallback'
-/mnt/71b93e02-0f1d-4d32-9e5e-ba2734ee3f54/tool/Vitis/2024.2/gnu/aarch32/lin/gcc-arm-none-eabi/x86_64-oesdk-linux/usr/bin/arm-xilinx-eabi/arm-xilinx-eabi-ld.real: /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/Debug/../src/dma_write.c:168:(.text+0x68c): undefined reference to `XAxiDma_IntrSetCallback'
-collect2.real: error: ld returned 1 exit status
-make[1]: *** [makefile:43: lwip_server.elf] Error 1
+Building file: ../src/iic_task.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/iic_task.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/sw/rtos2/freertos10_xilinx_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/iic_task.d" -MT"src/iic_task.o" -o "src/iic_task.o" "../src/iic_task.c"
+../src/iic_task.c: In function 'IicTask':
+../src/iic_task.c:69:59: error: 'XIicPs_Handler' undeclared (first use in this function); did you mean 'XIicPs_IntrHandler'?
+   69 |     XIicPs_SetStatusHandler(&IicInstance, &IicInstance, (*XIicPs_Handler)I2C_InterruptHandler);
+      |                                                           ^~~~~~~~~~~~~~
+      |                                                           XIicPs_IntrHandler
+../src/iic_task.c:69:59: note: each undeclared identifier is reported only once for each function it appears in
+../src/iic_task.c:69:74: error: expected ')' before 'I2C_InterruptHandler'
+   69 |     XIicPs_SetStatusHandler(&IicInstance, &IicInstance, (*XIicPs_Handler)I2C_InterruptHandler);
+      |                            ~                                             ^~~~~~~~~~~~~~~~~~~~
+      |                                                                          )
+make[1]: *** [src/subdir.mk:35: src/iic_task.o] Error 1
 make: *** [makefile:34: all] Error 2
 
-10:06:52 Build Finished (took 273ms)
+12:05:20 Build Finished (took 275ms)
 
