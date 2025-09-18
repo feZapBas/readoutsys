@@ -54,7 +54,9 @@ err_t dhcp_start(struct netif *netif);
 // Handles para UART, DMA y GIC
 XUartPs UartPs;
 XDmaPs Dma;
-XScuGic Intc;
+XScuGic InterruptController;   // instancia global
+XScuGic_Config *GicConfig;     // puntero a config
+
 
 #define UART_DEVICE_ID XPAR_XUARTPS_0_DEVICE_ID
 #define DMA_DEVICE_ID XPAR_XDMAPS_0_DEVICE_ID

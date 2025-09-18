@@ -21,8 +21,8 @@ static int init_iic(void);
 static int SetupInterruptSystem_iic(XIicPs *IicPsPtr);
 void I2C_InterruptHandler(void *CallBackRef, u32 Event);
 
-static XIicPs IicInstance;
-static XIicPs_Config *ConfigPtr;
+XIicPs IicInstance;
+XIicPs_Config *ConfigPtr;
 extern XScuGic InterruptController;
 extern XScuGic_Config *GicConfig;
 
@@ -157,7 +157,7 @@ static void IicTask(void *pvParameters)
         }
     }
 
-    xil_printf("Configuration to ANDESPix successful\r\n");
+    xil_printf("Configuration to Sensor 1 successful\r\n");
 
     vTaskDelete(NULL);
 }

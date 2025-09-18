@@ -27,3 +27,4 @@ platform generate
 platform active {rtos2}
 bsp reload
 platform generate -domains 
+platform generate
