@@ -57,6 +57,7 @@ Desarrollar un sistema en tiempo real capaz de:
 - **Command Handler Task**: procesa comandos externos para reconfiguración.  
 
 ---
+![photo_5071493243228326724_y](https://github.com/user-attachments/assets/4cc8d167-1529-4e83-8d78-33dd658787ca)
 
 ## Requisitos del Sistema
 - **Hardware**: Cora Z7 (Zynq-7000).  
