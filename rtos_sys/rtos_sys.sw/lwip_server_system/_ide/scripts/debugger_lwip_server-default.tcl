@@ -14,9 +14,9 @@ targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
 targets -set -filter {jtag_cable_name =~ "Digilent Cora Z7 - 7007S 210370BCADD2A" && level==0 && jtag_device_ctx=="jsn-Cora Z7 - 7007S-210370BCADD2A-13723093-0"}
-fpga -file /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/_ide/bitstream/rtos2.bit
+fpga -file /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/_ide/bitstream/rtos_sys_final_test.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos2.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+loadhw -hw /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/rtos2/export/rtos2/hw/rtos_sys_final_test.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
 source /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server/_ide/psinit/ps7_init.tcl

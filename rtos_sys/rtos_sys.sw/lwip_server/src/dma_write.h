@@ -24,8 +24,8 @@
 extern XGpio AxiGpio;
 extern XAxiDma DMA0;
 extern XAxiDma DMA1;
-extern u64 data_andespix_to_zynq[DMA_TRANSFER_SIZE];
-extern u64 data_triggerumd_to_zynq[DMA_TRANSFER_SIZE];
+extern u64 data_sensor1_to_zynq[DMA_TRANSFER_SIZE];
+extern u64 data_sensor2_to_zynq[DMA_TRANSFER_SIZE];
 extern UINTPTR BuffAddr0;
 extern UINTPTR BuffAddr1;
 extern u8 test_buf[65536];

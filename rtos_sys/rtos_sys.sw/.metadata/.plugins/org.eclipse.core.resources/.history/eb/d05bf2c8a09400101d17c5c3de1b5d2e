@@ -1,0 +1,480 @@
+/*#include "xgpio.h"
+#include "xaxidma.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xscugic.h"
+#include "sleep.h"
+#include "xil_exception.h"
+#include "xil_cache.h"
+#include "xil_printf.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include <string.h>
+
+XGpio_Config *GpioCfgPtr;
+XGpio AxiGpio;
+XAxiDma DMA0;
+XAxiDma DMA1;
+XAxiDma_Config *DMA0_CONFIG;
+XAxiDma_Config *DMA1_CONFIG;
+#define DMA_BUFFER_SIZE   1024
+u8 dma_rx_buffer[DMA_BUFFER_SIZE] __attribute__ ((aligned(64)));
+
+#define DMA0_DEVICE_ID      XPAR_AXIDMA_0_DEVICE_ID
+#define DMA1_DEVICE_ID      XPAR_AXIDMA_1_DEVICE_ID
+#define GPIO_DEV_ID         XPAR_GPIO_0_DEVICE_ID
+#define DMA_TRANSFER_SIZE   64
+
+u32 Length = sizeof(u64) * 64;
+u32 num_elements = DMA_TRANSFER_SIZE / sizeof(u64);
+
+u64 data_andespix_to_zynq[64];
+u64 data_triggerumd_to_zynq[64];
+
+UINTPTR BuffAddr0 = (UINTPTR)data_andespix_to_zynq;
+UINTPTR BuffAddr1 = (UINTPTR)data_triggerumd_to_zynq;
+
+u8 test_buf[65536];
+u32 status;
+
+SemaphoreHandle_t xDma0Semaphore;
+SemaphoreHandle_t xDma1Semaphore;
+
+
+extern XScuGic_Config *GicConfig;
+extern XScuGic InterruptController;
+
+#define INTC_DEVICE_ID      XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define DMA0_RX_INTR_ID     XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR
+#define DMA1_RX_INTR_ID     XPAR_FABRIC_AXI_DMA_1_S2MM_INTROUT_INTR
+
+#ifndef XAxiDma_CallBackFn
+typedef void (*XAxiDma_CallBackFn)(void *CallBackRef, u32 IrqMask, int *IgnorePtr);
+#endif
+
+static void Dma0RxDoneCallback(void *CallBackRef, u32 IrqMask, int *IgnorePtr) {
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    xSemaphoreGiveFromISR(xDma0Semaphore, &xHigherPriorityTaskWoken);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
+
+static void Dma1RxDoneCallback(void *CallBackRef, u32 IrqMask, int *IgnorePtr) {
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    xSemaphoreGiveFromISR(xDma1Semaphore, &xHigherPriorityTaskWoken);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
+
+void Dma0IntrHandler(void *CallbackRef) {
+    u32 IrqStatus;
+    int Ignore = 0;
+
+    IrqStatus = XAxiDma_IntrGetIrq(&DMA0, XAXIDMA_DEVICE_TO_DMA);
+    XAxiDma_IntrAckIrq(&DMA0, IrqStatus, XAXIDMA_DEVICE_TO_DMA);
+
+    if ((IrqStatus & XAXIDMA_IRQ_IOC_MASK) != 0) {
+        Dma0RxDoneCallback(CallbackRef, IrqStatus, &Ignore);
+    }
+}
+
+void Dma1IntrHandler(void *CallbackRef) {
+    u32 IrqStatus;
+    int Ignore = 0;
+
+    IrqStatus = XAxiDma_IntrGetIrq(&DMA1, XAXIDMA_DEVICE_TO_DMA);
+    XAxiDma_IntrAckIrq(&DMA1, IrqStatus, XAXIDMA_DEVICE_TO_DMA);
+
+    if ((IrqStatus & XAXIDMA_IRQ_IOC_MASK) != 0) {
+        Dma1RxDoneCallback(CallbackRef, IrqStatus, &Ignore);
+    }
+}
+
+int InitInterrupts(void) {
+    int Status;
+
+    GicConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+    if (NULL == GicConfig) {
+        return XST_FAILURE;
+    }
+
+    Status = XScuGic_CfgInitialize(&InterruptController, GicConfig, GicConfig->CpuBaseAddress);
+    if (Status != XST_SUCCESS) {
+        return XST_FAILURE;
+    }
+
+    XScuGic_SetPriorityTriggerType(&InterruptController, DMA0_RX_INTR_ID, 0, 0x01);
+    XScuGic_SetPriorityTriggerType(&InterruptController, DMA1_RX_INTR_ID, 0, 0x01);
+
+    Status = XScuGic_Connect(&InterruptController, DMA0_RX_INTR_ID,
+                             (Xil_InterruptHandler)Dma0IntrHandler, &DMA0);
+    if (Status != XST_SUCCESS) {
+        return Status;
+    }
+
+    Status = XScuGic_Connect(&InterruptController, DMA1_RX_INTR_ID,
+                             (Xil_InterruptHandler)Dma1IntrHandler, &DMA1);
+    if (Status != XST_SUCCESS) {
+        return Status;
+    }
+
+    XScuGic_Enable(&InterruptController, DMA0_RX_INTR_ID);
+    XScuGic_Enable(&InterruptController, DMA1_RX_INTR_ID);
+
+    Xil_ExceptionInit();
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+                                 (Xil_ExceptionHandler)XScuGic_InterruptHandler,
+                                 &InterruptController);
+    Xil_ExceptionEnable();
+
+    return XST_SUCCESS;
+}
+
+int dma_initialization(void) {
+    Xil_DCacheFlushRange((UINTPTR)data_andespix_to_zynq, DMA_TRANSFER_SIZE);
+    Xil_DCacheFlushRange((UINTPTR)data_triggerumd_to_zynq, DMA_TRANSFER_SIZE);
+
+    if ((BuffAddr0 & 0x07) != 0) {
+        xil_printf("Buffer address 0 is not 8-byte aligned!\n");
+        return XST_FAILURE;
+    }
+    if ((BuffAddr1 & 0x07) != 0) {
+        xil_printf("Buffer address 1 is not 8-byte aligned!\n");
+        return XST_FAILURE;
+    }
+
+    GpioCfgPtr = XGpio_LookupConfig(GPIO_DEV_ID);
+    if (!GpioCfgPtr) return XST_FAILURE;
+
+    status = XGpio_CfgInitialize(&AxiGpio, GpioCfgPtr, GpioCfgPtr->BaseAddress);
+    if (status != XST_SUCCESS) return XST_FAILURE;
+    xil_printf("GPIO initialized.\r\n");
+
+    DMA0_CONFIG = XAxiDma_LookupConfig(DMA0_DEVICE_ID);
+    DMA1_CONFIG = XAxiDma_LookupConfig(DMA1_DEVICE_ID);
+
+    if (!DMA0_CONFIG || !DMA1_CONFIG) {
+        xil_printf("DMA LookupConfig error.\n");
+        return XST_FAILURE;
+    }
+
+    status = XAxiDma_CfgInitialize(&DMA0, DMA0_CONFIG);
+    if (status != XST_SUCCESS) {
+        xil_printf("DMA0_CONFIG error.\r\n");
+        return XST_FAILURE;
+    }
+
+    status = XAxiDma_CfgInitialize(&DMA1, DMA1_CONFIG);
+    if (status != XST_SUCCESS) {
+        xil_printf("DMA1_CONFIG error.\r\n");
+        return XST_FAILURE;
+    }
+
+    XAxiDma_IntrDisable(&DMA0, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+    XAxiDma_IntrDisable(&DMA1, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+
+    XAxiDma_IntrEnable(&DMA0, XAXIDMA_IRQ_IOC_MASK, XAXIDMA_DEVICE_TO_DMA);
+    XAxiDma_IntrEnable(&DMA1, XAXIDMA_IRQ_IOC_MASK, XAXIDMA_DEVICE_TO_DMA);
+
+    if (InitInterrupts() != XST_SUCCESS) {
+        xil_printf("Interrupts init failed.\r\n");
+        return XST_FAILURE;
+    }
+
+    xDma0Semaphore = xSemaphoreCreateBinary();
+    xDma1Semaphore = xSemaphoreCreateBinary();
+    if (xDma0Semaphore == NULL || xDma1Semaphore == NULL) {
+        xil_printf("Semaphore creation failed.\r\n");
+        return XST_FAILURE;
+    }
+
+    xil_printf("DMA0 & DMA1 initialized OK.\n");
+    XGpio_DiscreteWrite(&AxiGpio, 1, 0);
+
+    return XST_SUCCESS;
+}
+
+void vDmaTask(void *pvParameters)
+{
+    xil_printf("Starting DMA transfer...\r\n");
+
+    int status = XAxiDma_SimpleTransfer(&DMA0,
+                                        (UINTPTR)dma_rx_buffer,
+                                        DMA_BUFFER_SIZE,
+                                        XAXIDMA_DEVICE_TO_DMA);
+    if (status != XST_SUCCESS) {
+        xil_printf("DMA transfer failed to start!\r\n");
+        vTaskDelete(NULL);
+    }
+
+    if (xSemaphoreTake(xDma0Semaphore, portMAX_DELAY) == pdTRUE) {
+        xil_printf("DMA transfer complete!\r\n");
+
+        tcp_send_message("DMA DONE\r\n");
+
+        for (int i = 0; i < 16; i++) {
+            xil_printf("%02X ", dma_rx_buffer[i]);
+        }
+        xil_printf("\r\n");
+    }
+
+    vTaskDelete(NULL);
+}
+
+void reset_gpio(void) {
+    XGpio_DiscreteWrite(&AxiGpio, 1, 0);
+    usleep(20);
+    XGpio_DiscreteWrite(&AxiGpio, 1, 1);
+
+    for (int i = 0; i < DMA_TRANSFER_SIZE; i++) {
+        data_andespix_to_zynq[i] = 0;
+        data_triggerumd_to_zynq[i] = 0;
+    }
+}
+
+int dma_data_ready_callback(void) {
+    memcpy(&test_buf[0], data_andespix_to_zynq, num_elements * sizeof(u64));
+    memcpy(&test_buf[num_elements], data_triggerumd_to_zynq, num_elements * sizeof(u64));
+    return XST_SUCCESS;
+}
+*/
+#include "xgpio.h"
+#include "xaxidma.h"
+#include "xparameters.h"
+#include "xil_types.h"
+#include "xscugic.h"
+#include "sleep.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "semphr.h"
+#include "lwip/sockets.h"
+#include <string.h>
+#include <stdio.h>
+
+/*------------------- GLOBALS ------------------*/
+XGpio_Config *GpioCfgPtr;
+XGpio AxiGpio;
+XAxiDma DMA0;
+XAxiDma DMA1;
+XAxiDma_Config *DMA0_CONFIG;
+XAxiDma_Config *DMA1_CONFIG;
+
+#define DMA0_DEVICE_ID      XPAR_AXIDMA_0_DEVICE_ID
+#define DMA1_DEVICE_ID      XPAR_AXIDMA_1_DEVICE_ID
+#define GPIO_DEV_ID         XPAR_GPIO_0_DEVICE_ID
+#define DMA_TRANSFER_SIZE   64
+
+u32 Length = sizeof(u32) * 64;
+u32 num_elements = DMA_TRANSFER_SIZE / sizeof(u64);
+u32 data_sensor1_to_zynq[64];
+u32 data_sensor2_to_zynq[64];
+UINTPTR BuffAddr0 = (UINTPTR)data_sensor1_to_zynq;
+UINTPTR BuffAddr1 = (UINTPTR)data_sensor2_to_zynq;
+u8 test_buf[65536];
+u32 status;
+
+/* Semáforos para sincronización de DMA en FreeRTOS */
+SemaphoreHandle_t xDma0Semaphore;
+SemaphoreHandle_t xDma1Semaphore;
+
+/* GIC */
+extern XScuGic_Config *GicConfig;
+extern XScuGic InterruptController;
+#define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define DMA0_RX_INTR_ID XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR
+#define DMA1_RX_INTR_ID XPAR_FABRIC_AXI_DMA_1_S2MM_INTROUT_INTR
+#include "FreeRTOS.h"
+#include "semphr.h"
+
+static int dmaTcpSocket = -1;       // socket que usará DMA
+static SemaphoreHandle_t xTcpSem;   // semáforo para notificar tarea DMA
+
+void initTcpForDma(void) {
+    xTcpSem = xSemaphoreCreateBinary();
+}
+
+void setTcpSocketForDma(int sock) {
+    dmaTcpSocket = sock;
+    if (xTcpSem != NULL) {
+        xSemaphoreGive(xTcpSem);   // despierta la tarea DMA
+    }
+}
+
+int getTcpSocketForDma(void) {
+    return dmaTcpSocket;
+}
+
+SemaphoreHandle_t getTcpSemaphore(void) {
+    return xTcpSem;
+}
+
+/*------------------- CALLBACKS ------------------*/
+static void Dma0RxDoneCallback(void *CallBackRef, u32 IrqMask, int *IgnorePtr) {
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    xSemaphoreGiveFromISR(xDma0Semaphore, &xHigherPriorityTaskWoken);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
+
+static void Dma1RxDoneCallback(void *CallBackRef, u32 IrqMask, int *IgnorePtr) {
+    BaseType_t xHigherPriorityTaskWoken = pdFALSE;
+    xSemaphoreGiveFromISR(xDma1Semaphore, &xHigherPriorityTaskWoken);
+    portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
+}
+
+/* Handler de interrupciones DMA */
+void Dma0IntrHandler(void *CallbackRef) {
+    u32 IrqStatus;
+    int Ignore;
+
+    IrqStatus = XAxiDma_IntrGetIrq(&DMA0, XAXIDMA_DEVICE_TO_DMA);
+    XAxiDma_IntrAckIrq(&DMA0, IrqStatus, XAXIDMA_DEVICE_TO_DMA);
+
+    if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
+        Dma0RxDoneCallback(CallbackRef, IrqStatus, &Ignore);
+    }
+}
+
+void Dma1IntrHandler(void *CallbackRef) {
+    u32 IrqStatus;
+    int Ignore;
+
+    IrqStatus = XAxiDma_IntrGetIrq(&DMA1, XAXIDMA_DEVICE_TO_DMA);
+    XAxiDma_IntrAckIrq(&DMA1, IrqStatus, XAXIDMA_DEVICE_TO_DMA);
+
+    if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
+        Dma1RxDoneCallback(CallbackRef, IrqStatus, &Ignore);
+    }
+}
+
+/*------------------- INIT INTERRUPTS ------------------*/
+int InitInterrupts(void) {
+    int Status;
+
+    GicConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+    if (GicConfig == NULL) return XST_FAILURE;
+
+    Status = XScuGic_CfgInitialize(&InterruptController, GicConfig, GicConfig->CpuBaseAddress);
+    if (Status != XST_SUCCESS) return XST_FAILURE;
+
+    XScuGic_SetPriorityTriggerType(&InterruptController, DMA0_RX_INTR_ID, 0, 0x01);
+    XScuGic_SetPriorityTriggerType(&InterruptController, DMA1_RX_INTR_ID, 0, 0x01);
+
+    Status = XScuGic_Connect(&InterruptController, DMA0_RX_INTR_ID, (Xil_InterruptHandler)Dma0IntrHandler, &DMA0);
+    if (Status != XST_SUCCESS) return Status;
+
+    Status = XScuGic_Connect(&InterruptController, DMA1_RX_INTR_ID, (Xil_InterruptHandler)Dma1IntrHandler, &DMA1);
+    if (Status != XST_SUCCESS) return Status;
+
+    XScuGic_Enable(&InterruptController, DMA0_RX_INTR_ID);
+    XScuGic_Enable(&InterruptController, DMA1_RX_INTR_ID);
+
+    Xil_ExceptionInit();
+    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler)XScuGic_InterruptHandler, &InterruptController);
+    Xil_ExceptionEnable();
+
+    return XST_SUCCESS;
+}
+
+/*------------------- DMA INIT ------------------*/
+int dma_initialization(void) {
+    /* Limpieza de caché y chequeo alineación */
+    Xil_DCacheFlushRange(BuffAddr0, DMA_TRANSFER_SIZE);
+    Xil_DCacheFlushRange(BuffAddr1, DMA_TRANSFER_SIZE);
+
+    if ((BuffAddr0 & 0x07) || (BuffAddr1 & 0x07)) {
+        xil_printf("DMA buffer not 8-byte aligned!\n\r");
+        return XST_FAILURE;
+    }
+
+    /* GPIO */
+    GpioCfgPtr = XGpio_LookupConfig(GPIO_DEV_ID);
+    if (!GpioCfgPtr) return XST_FAILURE;
+
+    status = XGpio_CfgInitialize(&AxiGpio, GpioCfgPtr, GpioCfgPtr->BaseAddress);
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    /* DMA0 */
+    DMA0_CONFIG = XAxiDma_LookupConfig(DMA0_DEVICE_ID);
+    if (!DMA0_CONFIG) return XST_FAILURE;
+
+    status = XAxiDma_CfgInitialize(&DMA0, DMA0_CONFIG);
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    /* DMA1 */
+    DMA1_CONFIG = XAxiDma_LookupConfig(DMA1_DEVICE_ID);
+    if (!DMA1_CONFIG) return XST_FAILURE;
+
+    status = XAxiDma_CfgInitialize(&DMA1, DMA1_CONFIG);
+    if (status != XST_SUCCESS) return XST_FAILURE;
+
+    /* Deshabilitar interrupciones DMA antes de habilitar GIC */
+    XAxiDma_IntrDisable(&DMA0, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+    XAxiDma_IntrDisable(&DMA1, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+    for (int i = 0; i < DMA_TRANSFER_SIZE; i++) {
+    	data_sensor1_to_zynq[i] = 0;
+    	data_sensor2_to_zynq[i] = 0;
+    }
+    /* Inicializar interrupciones GIC */
+    if (InitInterrupts() != XST_SUCCESS) {
+        xil_printf("Interrupts initialization failed!\n\r");
+        return XST_FAILURE;
+    }
+
+    /* Crear semáforos */
+    xDma0Semaphore = xSemaphoreCreateBinary();
+    xDma1Semaphore = xSemaphoreCreateBinary();
+    if (!xDma0Semaphore || !xDma1Semaphore) return XST_FAILURE;
+    reset_gpio();
+    xil_printf("DMA and GPIO initialized successfully.\n\r");
+
+    return XST_SUCCESS;
+}
+
+/*------------------- RESET GPIO ------------------*/
+void reset_gpio(void) {
+    XGpio_DiscreteWrite(&AxiGpio, 1, 0);
+    usleep(20);
+    XGpio_DiscreteWrite(&AxiGpio, 1, 1);
+
+}
+
+/*------------------- DMA TASK ------------------*/
+void vDmaTask(void *pvParameters) {
+	 XGpio_DiscreteWrite(&AxiGpio, 1, 1);
+    int sock = (int)(uintptr_t) pvParameters; // socket TCP del cliente
+    u32 num_elements = DMA_TRANSFER_SIZE / sizeof(u64);
+  usleep(10);
+    for (;;) {
+        // DMA0
+        status = XAxiDma_SimpleTransfer(&DMA0, BuffAddr0, Length, XAXIDMA_DEVICE_TO_DMA);
+        if (status != XST_SUCCESS) { xil_printf("DMA0 transfer failed!\r\n"); continue; }
+        for (int i = 0; i < 8; i++) // solo los primeros 8 elementos
+            xil_printf("DMA0[%d] = %u\n\r", i, data_sensor1_to_zynq[i]);
+        for (int i = 0; i < num_elements; i++)
+        	data_sensor1_to_zynq[i] = i;
+
+        if (xSemaphoreTake(xDma0Semaphore, portMAX_DELAY) == pdTRUE) {
+            xil_printf("DMA0 done, sending data...\r\n");
+            int sent = lwip_write(sock, data_sensor1_to_zynq, Length);
+            if (sent < 0) { xil_printf("TCP send failed!\r\n"); break; }
+        }
+
+        // DMA1
+        status = XAxiDma_SimpleTransfer(&DMA1, BuffAddr1, Length, XAXIDMA_DEVICE_TO_DMA);
+        if (status != XST_SUCCESS) { xil_printf("DMA1 transfer failed!\r\n"); continue; }
+
+        if (xSemaphoreTake(xDma1Semaphore, portMAX_DELAY) == pdTRUE) {
+            xil_printf("DMA1 done, sending data...\r\n");
+            int sent = lwip_write(sock, data_sensor2_to_zynq, Length);
+            if (sent < 0) { xil_printf("TCP send failed!\r\n"); break; }
+        }
+
+
+        vTaskDelay(pdMS_TO_TICKS(100)); // ajustar según velocidad de adquisición
+    }
+
+    lwip_close(sock);
+    vTaskDelete(NULL);
+}
+
+
+

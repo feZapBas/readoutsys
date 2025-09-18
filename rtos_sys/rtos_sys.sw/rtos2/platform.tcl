@@ -28,3 +28,8 @@ platform active {rtos2}
 bsp reload
 platform generate -domains 
 platform generate
+platform active {rtos2}
+platform config -updatehw {/home/ej3b/readoutsys/rtos_sys/rtos_sys_ultimate.xsa}
+platform generate -domains 
+platform config -updatehw {/home/ej3b/readoutsys/rtos_sys/rtos_sys_final_test.xsa}
+platform generate -domains 

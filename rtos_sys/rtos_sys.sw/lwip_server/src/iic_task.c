@@ -158,6 +158,7 @@ static void IicTask(void *pvParameters)
     }
 
     xil_printf("Configuration to Sensor 1 successful\r\n");
+    tcp_send_message("Configuration to Sensor 1 successful\r\n");
 
     vTaskDelete(NULL);
 }

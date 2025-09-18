@@ -71,12 +71,12 @@ input wire clk;
 input wire enable;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 axis TREADY" *)
 (* X_INTERFACE_MODE = "master" *)
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN rtos_sys_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME axis, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 1, HAS_TLAST 1, FREQ_HZ 10000000, PHASE 0.0, CLK_DOMAIN rtos_sys_processing_system7_0_0_FCLK_CLK0, LAYERED_METADATA undef, INSERT_VIP 0" *)
 input wire axis_tready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 axis TDATA" *)
-output wire [63 : 0] axis_tdata;
+output wire [31 : 0] axis_tdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 axis TKEEP" *)
-output wire [7 : 0] axis_tkeep;
+output wire [3 : 0] axis_tkeep;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 axis TVALID" *)
 output wire axis_tvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:axis:1.0 axis TLAST" *)

@@ -7,7 +7,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Sat Sep  6 20:57:54 2025
+  **** Start of session at: Thu Sep 18 11:54:49 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007
 INFO: [Device 21-403] Loading part xc7z007sclg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 36265
+INFO: [Synth 8-7075] Helper process launched with PID 50711
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:12 . Memory (MB): peak = 1916.945 ; gain = 419.828 ; free physical = 4118 ; free virtual = 15437
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1915.688 ; gain = 417.828 ; free physical = 12312 ; free virtual = 23672
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'rtos_sys_axi_dma_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_dma_0_0/synth/rtos_sys_axi_dma_0_0.vhd:107]
 	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 10 - type: integer 
@@ -50,7 +50,7 @@ INFO: [Synth 8-638] synthesizing module 'rtos_sys_axi_dma_0_0' [/home/ej3b/reado
 	Parameter C_INCLUDE_MM2S_DRE bound to: 0 - type: integer 
 	Parameter C_INCLUDE_S2MM bound to: 1 - type: integer 
 	Parameter C_INCLUDE_S2MM_SF bound to: 1 - type: integer 
-	Parameter C_S2MM_BURST_SIZE bound to: 16 - type: integer 
+	Parameter C_S2MM_BURST_SIZE bound to: 64 - type: integer 
 	Parameter C_M_AXI_S2MM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_S2MM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXIS_S2MM_TDATA_WIDTH bound to: 32 - type: integer 
@@ -168,12 +168,12 @@ INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [/home/ej3b
 INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/e160/hdl/lib_fifo_v1_0_rfs.vhd:2232]
 	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
 	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 11 - type: integer 
 	Parameter READ_MODE bound to: fwft - type: string 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
 	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
-	Parameter READ_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 11 - type: integer 
 	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
@@ -211,14 +211,14 @@ INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (0#1) 
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/4277/hdl/axi_datamover_v5_1_vh_rfs.vhd:1278]
 INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/e160/hdl/lib_fifo_v1_0_rfs.vhd:2232]
 	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
-	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
+	Parameter FIFO_WRITE_DEPTH bound to: 512 - type: integer 
 	Parameter WRITE_DATA_WIDTH bound to: 38 - type: integer 
 	Parameter READ_MODE bound to: fwft - type: string 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
 	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
 	Parameter READ_DATA_WIDTH bound to: 38 - type: integer 
-	Parameter WR_DATA_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 10 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
 	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
@@ -382,6 +382,8 @@ WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnec
 WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
@@ -416,22 +418,20 @@ WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__par
 WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port calc2wsc_calc_error in module axi_datamover_wr_status_cntl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addr2wsc_fifo_empty in module axi_datamover_wr_status_cntl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port data2wsc_last_error in module axi_datamover_wr_status_cntl is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2150.883 ; gain = 653.766 ; free physical = 2529 ; free virtual = 13799
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2151.625 ; gain = 653.766 ; free physical = 11530 ; free virtual = 22907
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2150.883 ; gain = 653.766 ; free physical = 2524 ; free virtual = 13790
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2151.625 ; gain = 653.766 ; free physical = 11530 ; free virtual = 22907
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 2150.883 ; gain = 653.766 ; free physical = 2524 ; free virtual = 13790
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2151.625 ; gain = 653.766 ; free physical = 11530 ; free virtual = 22907
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2150.883 ; gain = 0.000 ; free physical = 2477 ; free virtual = 13758
+Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2151.625 ; gain = 0.000 ; free physical = 11544 ; free virtual = 22921
 INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -453,22 +453,22 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/rtos_sys_axi
 INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2222.852 ; gain = 0.000 ; free physical = 2448 ; free virtual = 13742
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2230.531 ; gain = 0.000 ; free physical = 11545 ; free virtual = 22923
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 12 instances were transformed.
   FDR => FDRE: 12 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2222.852 ; gain = 0.000 ; free physical = 2446 ; free virtual = 13740
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2230.531 ; gain = 0.000 ; free physical = 11557 ; free virtual = 22936
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2222.852 ; gain = 725.734 ; free physical = 2334 ; free virtual = 13625
+Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2230.531 ; gain = 732.672 ; free physical = 11587 ; free virtual = 22976
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2230.855 ; gain = 733.738 ; free physical = 2334 ; free virtual = 13622
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2238.535 ; gain = 740.676 ; free physical = 11579 ; free virtual = 22969
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -477,7 +477,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/ej3b/
 Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_XD_FIFO/\NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:33 . Memory (MB): peak = 2230.855 ; gain = 733.738 ; free physical = 2345 ; free virtual = 13632
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 2238.535 ; gain = 740.676 ; free physical = 11579 ; free virtual = 22969
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'smpl_cs_reg' in module 'axi_dma_smple_sm'
 INFO: [Synth 8-802] inferred FSM for state register 'sig_psm_state_reg' in module 'axi_datamover_ibttcc'
@@ -547,7 +547,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:36 . Memory (MB): peak = 2230.855 ; gain = 733.738 ; free physical = 1932 ; free virtual = 13267
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2238.535 ; gain = 740.676 ; free physical = 11457 ; free virtual = 22848
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -556,16 +556,18 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input   16 Bit       Adders := 1     
 	   3 Input   14 Bit       Adders := 1     
-	   4 Input    8 Bit       Adders := 4     
-	   2 Input    8 Bit       Adders := 3     
-	   2 Input    7 Bit       Adders := 4     
-	   4 Input    7 Bit       Adders := 5     
-	   3 Input    7 Bit       Adders := 1     
+	   4 Input   10 Bit       Adders := 4     
+	   2 Input   10 Bit       Adders := 2     
+	   2 Input    9 Bit       Adders := 4     
+	   4 Input    9 Bit       Adders := 5     
+	   3 Input    9 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 1     
+	   2 Input    6 Bit       Adders := 1     
 	   3 Input    5 Bit       Adders := 1     
 	   4 Input    5 Bit       Adders := 4     
 	   2 Input    5 Bit       Adders := 2     
 	   3 Input    4 Bit       Adders := 3     
-	   2 Input    4 Bit       Adders := 3     
+	   2 Input    4 Bit       Adders := 2     
 	   4 Input    4 Bit       Adders := 5     
 	   3 Input    3 Bit       Adders := 5     
 	   2 Input    3 Bit       Adders := 4     
@@ -581,19 +583,19 @@ Detailed RTL Component Info :
 	               23 Bit    Registers := 2     
 	               16 Bit    Registers := 1     
 	               14 Bit    Registers := 10    
-	               10 Bit    Registers := 3     
-	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 9     
-	                7 Bit    Registers := 7     
-	                6 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	               10 Bit    Registers := 8     
+	                9 Bit    Registers := 8     
+	                8 Bit    Registers := 4     
+	                6 Bit    Registers := 2     
 	                5 Bit    Registers := 9     
-	                4 Bit    Registers := 39    
+	                4 Bit    Registers := 38    
 	                3 Bit    Registers := 7     
 	                2 Bit    Registers := 11    
 	                1 Bit    Registers := 314   
 +---RAMs : 
-	               4K Bit	(128 X 38 bit)          RAMs := 1     
-	              144 Bit	(16 X 9 bit)          RAMs := 1     
+	              19K Bit	(512 X 38 bit)          RAMs := 1     
+	              176 Bit	(16 X 11 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input  153 Bit        Muxes := 1     
 	   2 Input   40 Bit        Muxes := 1     
@@ -604,9 +606,12 @@ Detailed RTL Component Info :
 	   4 Input   14 Bit        Muxes := 2     
 	   3 Input   14 Bit        Muxes := 1     
 	   2 Input   11 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 6     
+	   2 Input   10 Bit        Muxes := 2     
+	   2 Input    9 Bit        Muxes := 3     
+	   3 Input    9 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 4     
 	   3 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 10    
+	   2 Input    7 Bit        Muxes := 7     
 	   7 Input    7 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 4     
 	   2 Input    4 Bit        Muxes := 10    
@@ -654,7 +659,7 @@ INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_L
 INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
 INFO: [Synth 8-3332] Sequential element (I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC/FSM_onehot_sig_csm_state_reg[3]) is unused and will be removed from module axi_dma.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:36 ; elapsed = 00:00:45 . Memory (MB): peak = 2246.863 ; gain = 749.746 ; free physical = 1060 ; free virtual = 12401
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 2254.543 ; gain = 756.684 ; free physical = 12766 ; free virtual = 24155
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
@@ -667,7 +672,7 @@ Block RAM: Preliminary Mapping Report (see note below)
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                                                                                                                                                                                                                    | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 128 x 38(NO_CHANGE)    | W |   | 128 x 38(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 512 x 38(NO_CHANGE)    | W |   | 512 x 38(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
@@ -676,7 +681,7 @@ Distributed RAM: Preliminary Mapping Report (see note below)
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
 |Module Name                                                                                                                                                                                                                      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
-|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 9               | RAM32M x 2  | 
+|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 11              | RAM32M x 2  | 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
@@ -687,7 +692,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:44 ; elapsed = 00:00:54 . Memory (MB): peak = 2246.863 ; gain = 749.746 ; free physical = 7618 ; free virtual = 18966
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 2254.543 ; gain = 756.684 ; free physical = 15074 ; free virtual = 26497
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -696,7 +701,7 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:47 ; elapsed = 00:00:58 . Memory (MB): peak = 2256.074 ; gain = 758.957 ; free physical = 7701 ; free virtual = 19069
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2259.785 ; gain = 761.926 ; free physical = 15077 ; free virtual = 26478
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -706,7 +711,7 @@ Block RAM: Final Mapping Report
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 |Module Name                                                                                                                                                                                                                    | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 128 x 38(NO_CHANGE)    | W |   | 128 x 38(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 512 x 38(NO_CHANGE)    | W |   | 512 x 38(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 
@@ -714,7 +719,7 @@ Distributed RAM: Final Mapping Report
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
 |Module Name                                                                                                                                                                                                                      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
-|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 9               | RAM32M x 2  | 
+|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 11              | RAM32M x 2  | 
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
@@ -724,7 +729,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:00:59 . Memory (MB): peak = 2280.090 ; gain = 782.973 ; free physical = 9031 ; free virtual = 20403
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 2276.809 ; gain = 778.949 ; free physical = 15084 ; free virtual = 26485
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -744,37 +749,37 @@ Finished Final Netlist Cleanup
 INFO: [Synth 8-3295] tying undriven pin I_AXI_DMA_REG_MODULE/strm_valid_int2_inferred:in0 to constant 0
 INFO: [Synth 8-3295] tying undriven pin I_AXI_DMA_REG_MODULE/strm_valid_int_cdc_to_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2409.902 ; gain = 912.785 ; free physical = 11356 ; free virtual = 22722
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2408.621 ; gain = 910.762 ; free physical = 15097 ; free virtual = 26508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2409.902 ; gain = 912.785 ; free physical = 11352 ; free virtual = 22718
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2408.621 ; gain = 910.762 ; free physical = 15097 ; free virtual = 26508
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2409.902 ; gain = 912.785 ; free physical = 11134 ; free virtual = 22500
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2408.621 ; gain = 910.762 ; free physical = 15095 ; free virtual = 26506
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2409.902 ; gain = 912.785 ; free physical = 11114 ; free virtual = 22480
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2408.621 ; gain = 910.762 ; free physical = 15095 ; free virtual = 26506
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2412.871 ; gain = 915.754 ; free physical = 11068 ; free virtual = 22434
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2412.590 ; gain = 914.730 ; free physical = 15092 ; free virtual = 26502
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2412.871 ; gain = 915.754 ; free physical = 11058 ; free virtual = 22424
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2412.590 ; gain = 914.730 ; free physical = 15092 ; free virtual = 26502
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -809,50 +814,50 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |    27|
+|1     |CARRY4   |    35|
 |2     |LUT1     |    56|
-|3     |LUT2     |   100|
-|4     |LUT3     |   283|
-|5     |LUT4     |   199|
-|6     |LUT5     |   123|
-|7     |LUT6     |   160|
+|3     |LUT2     |   118|
+|4     |LUT3     |   279|
+|5     |LUT4     |   185|
+|6     |LUT5     |   151|
+|7     |LUT6     |   161|
 |8     |RAM32M   |     2|
 |9     |RAMB36E1 |     1|
-|10    |SRL16E   |    95|
+|10    |SRL16E   |    99|
 |11    |FDR      |     8|
-|12    |FDRE     |  1178|
+|12    |FDRE     |  1198|
 |13    |FDSE     |    51|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2412.871 ; gain = 915.754 ; free physical = 11051 ; free virtual = 22417
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2412.590 ; gain = 914.730 ; free physical = 15092 ; free virtual = 26502
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 757 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:49 ; elapsed = 00:01:00 . Memory (MB): peak = 2412.871 ; gain = 843.785 ; free physical = 10963 ; free virtual = 22329
-Synthesis Optimization Complete : Time (s): cpu = 00:00:52 ; elapsed = 00:01:03 . Memory (MB): peak = 2412.879 ; gain = 915.754 ; free physical = 10964 ; free virtual = 22330
+Synthesis finished with 0 errors, 0 critical warnings and 759 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 2412.590 ; gain = 835.824 ; free physical = 15078 ; free virtual = 26489
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 2412.598 ; gain = 914.730 ; free physical = 15078 ; free virtual = 26489
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.04 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2412.879 ; gain = 0.000 ; free physical = 11019 ; free virtual = 22385
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2412.598 ; gain = 0.000 ; free physical = 15210 ; free virtual = 26621
+INFO: [Netlist 29-17] Analyzing 46 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2468.898 ; gain = 0.000 ; free physical = 10513 ; free virtual = 21874
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2468.617 ; gain = 0.000 ; free physical = 15236 ; free virtual = 26638
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 10 instances were transformed.
   FDR => FDRE: 8 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
 
-Synth Design complete | Checksum: df840db8
+Synth Design complete | Checksum: 9b01c9d7
 INFO: [Common 17-83] Releasing license: Synthesis
 241 Infos, 143 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:01 ; elapsed = 00:01:10 . Memory (MB): peak = 2468.898 ; gain = 1102.160 ; free physical = 10340 ; free virtual = 21698
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1512.639; main = 1411.711; forked = 191.615
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3221.078; main = 2468.902; forked = 916.984
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2492.910 ; gain = 0.000 ; free physical = 10286 ; free virtual = 21644
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:32 . Memory (MB): peak = 2468.617 ; gain = 1000.543 ; free physical = 15238 ; free virtual = 26640
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1630.988; main = 1630.988; forked = 225.579
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3171.531; main = 2468.621; forked = 916.984
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2492.629 ; gain = 0.000 ; free physical = 15238 ; free virtual = 26639
 INFO: [Common 17-1381] The checkpoint '/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/rtos_sys_axi_dma_0_0_synth_1/rtos_sys_axi_dma_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP rtos_sys_axi_dma_0_0, cache-ID = 62056356249b14fe
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP rtos_sys_axi_dma_0_0, cache-ID = 8787b7f28ffe5875
 INFO: [Coretcl 2-1174] Renamed 84 cell refs.
-Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2492.910 ; gain = 0.000 ; free physical = 10046 ; free virtual = 21407
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2492.629 ; gain = 0.000 ; free physical = 15238 ; free virtual = 26644
 INFO: [Common 17-1381] The checkpoint '/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/rtos_sys_axi_dma_0_0_synth_1/rtos_sys_axi_dma_0_0.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file rtos_sys_axi_dma_0_0_utilization_synth.rpt -pb rtos_sys_axi_dma_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Sep  6 20:59:15 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 18 11:55:27 2025...

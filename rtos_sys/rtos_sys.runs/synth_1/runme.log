@@ -7,7 +7,7 @@
   **** SW Build 5239630 on Fri Nov 08 22:34:34 MST 2024
   **** IP Build 5239520 on Sun Nov 10 16:12:51 MST 2024
   **** SharedData Build 5239561 on Fri Nov 08 14:39:27 MST 2024
-  **** Start of session at: Sun Sep  7 14:54:07 2025
+  **** Start of session at: Thu Sep 18 13:20:54 2025
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
@@ -30,51 +30,47 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 21815
+INFO: [Synth 8-7075] Helper process launched with PID 143114
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1989.375 ; gain = 333.234 ; free physical = 20592 ; free virtual = 29657
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1988.480 ; gain = 305.234 ; free physical = 14443 ; free virtual = 26246
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'rtos_sys_wrapper' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/hdl/rtos_sys_wrapper.v:13]
 INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/media/ej3b/PROGRAMS/tool/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391]
 INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/media/ej3b/PROGRAMS/tool/Vivado/2024.2/scripts/rt/data/unisim_comp.v:80391]
 INFO: [Synth 8-6157] synthesizing module 'rtos_sys' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:385]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_dma_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_dma_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_dma_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_dma_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_dma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_dma_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_dma_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'rtos_sys_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:678]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'rtos_sys_axi_dma_0_0' is unconnected for instance 'axi_dma_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:678]
 WARNING: [Synth 8-7023] instance 'axi_dma_0' of module 'rtos_sys_axi_dma_0_0' has 43 connections declared, but only 41 given [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:678]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_dma_1_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_dma_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_dma_1_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_dma_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_dma_1_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_dma_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_dma_1_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_dma_1_0_stub.v:6]
 WARNING: [Synth 8-7071] port 's2mm_prmry_reset_out_n' of module 'rtos_sys_axi_dma_1_0' is unconnected for instance 'axi_dma_1' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:720]
 WARNING: [Synth 8-7071] port 'axi_dma_tstvec' of module 'rtos_sys_axi_dma_1_0' is unconnected for instance 'axi_dma_1' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:720]
 WARNING: [Synth 8-7023] instance 'axi_dma_1' of module 'rtos_sys_axi_dma_1_0' has 43 connections declared, but only 41 given [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:720]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_gpio_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_gpio_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_gpio_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_gpio_1_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_gpio_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_gpio_1_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_gpio_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_gpio_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_gpio_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_gpio_1_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_gpio_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_gpio_1_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_gpio_1_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1192]
 INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_1GBPCR7' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:13]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_pc_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_pc_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_pc_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_pc_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_pc_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_1GBPCR7' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:13]
 INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_N8V5F6' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:199]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_pc_1' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_pc_1_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_pc_1' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_pc_1' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_pc_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_pc_1' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_pc_1_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_N8V5F6' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:199]
 INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_JBX3M9' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1869]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_us_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_us_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_auto_us_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_auto_us_0_stub.v:6]
-WARNING: [Synth 8-7071] port 'm_axi_awregion' of module 'rtos_sys_axi_mem_intercon_imp_auto_us_0' is unconnected for instance 'auto_us' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1990]
-WARNING: [Synth 8-7023] instance 'auto_us' of module 'rtos_sys_axi_mem_intercon_imp_auto_us_0' has 40 connections declared, but only 39 given [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1990]
 INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_JBX3M9' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1869]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_s00_mmu_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_s00_mmu_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_s00_mmu_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_s00_mmu_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1BFSTWW' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:2032]
-INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1BFSTWW' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:2032]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_s01_mmu_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_s01_mmu_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_s01_mmu_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_s01_mmu_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_xbar_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_xbar_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_xbar_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_s00_mmu_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_s00_mmu_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_s00_mmu_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_s00_mmu_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 's01_couplers_imp_1BFSTWW' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1990]
+INFO: [Synth 8-6155] done synthesizing module 's01_couplers_imp_1BFSTWW' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1990]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_s01_mmu_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_s01_mmu_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_s01_mmu_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_s01_mmu_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_mem_intercon_imp_xbar_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_xbar_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_imp_xbar_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_mem_intercon_imp_xbar_0_stub.v:6]
 WARNING: [Synth 8-7071] port 's_axi_bid' of module 'rtos_sys_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1807]
 WARNING: [Synth 8-7071] port 's_axi_arready' of module 'rtos_sys_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1807]
 WARNING: [Synth 8-7071] port 's_axi_rid' of module 'rtos_sys_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1807]
@@ -96,8 +92,8 @@ WARNING: [Synth 8-7071] port 'm_axi_arvalid' of module 'rtos_sys_axi_mem_interco
 WARNING: [Synth 8-7071] port 'm_axi_rready' of module 'rtos_sys_axi_mem_intercon_imp_xbar_0' is unconnected for instance 'xbar' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1807]
 WARNING: [Synth 8-7023] instance 'xbar' of module 'rtos_sys_axi_mem_intercon_imp_xbar_0' has 78 connections declared, but only 59 given [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1807]
 INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_mem_intercon_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1192]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_smc_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_smc_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_smc_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axi_smc_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axi_smc_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axi_smc_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'M00_AXI_awprot' of module 'rtos_sys_axi_smc_0' is unconnected for instance 'axi_smc' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:889]
 WARNING: [Synth 8-7071] port 'M00_AXI_wstrb' of module 'rtos_sys_axi_smc_0' is unconnected for instance 'axi_smc' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:889]
 WARNING: [Synth 8-7071] port 'M00_AXI_arprot' of module 'rtos_sys_axi_smc_0' is unconnected for instance 'axi_smc' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:889]
@@ -109,12 +105,12 @@ WARNING: [Synth 8-7071] port 'M02_AXI_arprot' of module 'rtos_sys_axi_smc_0' is 
 WARNING: [Synth 8-7071] port 'M03_AXI_awprot' of module 'rtos_sys_axi_smc_0' is unconnected for instance 'axi_smc' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:889]
 WARNING: [Synth 8-7071] port 'M03_AXI_arprot' of module 'rtos_sys_axi_smc_0' is unconnected for instance 'axi_smc' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:889]
 WARNING: [Synth 8-7023] instance 'axi_smc' of module 'rtos_sys_axi_smc_0' has 116 connections declared, but only 106 given [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:889]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axis_data_fifo_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axis_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axis_data_fifo_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axis_data_fifo_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axis_data_fifo_1_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axis_data_fifo_1_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axis_data_fifo_1_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axis_data_fifo_1_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_processing_system7_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_processing_system7_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_processing_system7_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axis_data_fifo_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axis_data_fifo_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axis_data_fifo_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_axis_data_fifo_1_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axis_data_fifo_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_axis_data_fifo_1_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_axis_data_fifo_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_processing_system7_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_processing_system7_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_processing_system7_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_processing_system7_0_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'USB0_PORT_INDCTL' of module 'rtos_sys_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1022]
 WARNING: [Synth 8-7071] port 'USB0_VBUS_PWRSELECT' of module 'rtos_sys_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1022]
 WARNING: [Synth 8-7071] port 'S_AXI_HP0_ARREADY' of module 'rtos_sys_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1022]
@@ -138,17 +134,17 @@ WARNING: [Synth 8-7071] port 'S_AXI_HP1_WCOUNT' of module 'rtos_sys_processing_s
 WARNING: [Synth 8-7071] port 'S_AXI_HP1_RACOUNT' of module 'rtos_sys_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1022]
 WARNING: [Synth 8-7071] port 'S_AXI_HP1_WACOUNT' of module 'rtos_sys_processing_system7_0_0' is unconnected for instance 'processing_system7_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1022]
 WARNING: [Synth 8-7023] instance 'processing_system7_0' of module 'rtos_sys_processing_system7_0_0' has 162 connections declared, but only 140 given [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1022]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_rst_ps7_0_50M_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_rst_ps7_0_50M_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_rst_ps7_0_50M_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_rst_ps7_0_50M_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_rst_ps7_0_50M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_rst_ps7_0_50M_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_rst_ps7_0_50M_0_stub.v:6]
 WARNING: [Synth 8-7071] port 'mb_reset' of module 'rtos_sys_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1163]
 WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'rtos_sys_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1163]
 WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'rtos_sys_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1163]
 WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'rtos_sys_rst_ps7_0_50M_0' is unconnected for instance 'rst_ps7_0_50M' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1163]
 WARNING: [Synth 8-7023] instance 'rst_ps7_0_50M' of module 'rtos_sys_rst_ps7_0_50M_0' has 10 connections declared, but only 6 given [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/synth/rtos_sys.v:1163]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_snow_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_snow_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_snow_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_snow_0_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'rtos_sys_white_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_white_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_white_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-21727-ej3b-GF63-Thin-11SC/realtime/rtos_sys_white_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_snow_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_snow_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_snow_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_snow_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'rtos_sys_white_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_white_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'rtos_sys_white_0_0' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/.Xil/Vivado-143017-ej3b-GF63-Thin-11SC/realtime/rtos_sys_white_0_0_stub.v:6]
 INFO: [Synth 8-6157] synthesizing module 'rtos_sys_xlconcat_0_0' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_xlconcat_0_0/synth/rtos_sys_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_6_xlconcat' [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_6_xlconcat' (0#1) [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/6120/hdl/xlconcat_v2_1_vl_rfs.v:59]
@@ -257,18 +253,18 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_6_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_6_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2074.344 ; gain = 418.203 ; free physical = 20490 ; free virtual = 29557
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2072.449 ; gain = 389.203 ; free physical = 14349 ; free virtual = 26153
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2083.250 ; gain = 427.109 ; free physical = 20490 ; free virtual = 29557
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2087.293 ; gain = 404.047 ; free physical = 14349 ; free virtual = 26152
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2083.250 ; gain = 427.109 ; free physical = 20490 ; free virtual = 29557
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2087.293 ; gain = 404.047 ; free physical = 14349 ; free virtual = 26152
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2089.188 ; gain = 0.000 ; free physical = 20490 ; free virtual = 29557
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2090.262 ; gain = 0.000 ; free physical = 14349 ; free virtual = 26152
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -285,22 +281,20 @@ Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_
 Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_gpio_1_0/rtos_sys_axi_gpio_1_0/rtos_sys_axi_gpio_1_0_in_context.xdc] for cell 'rtos_sys_i/axi_gpio_1'
 Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axis_data_fifo_0_0/rtos_sys_axis_data_fifo_0_0/rtos_sys_axis_data_fifo_0_0_in_context.xdc] for cell 'rtos_sys_i/axis_data_fifo_0'
 Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axis_data_fifo_0_0/rtos_sys_axis_data_fifo_0_0/rtos_sys_axis_data_fifo_0_0_in_context.xdc] for cell 'rtos_sys_i/axis_data_fifo_0'
-Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axis_data_fifo_1_0/rtos_sys_axis_data_fifo_1_0/rtos_sys_axis_data_fifo_1_0_in_context.xdc] for cell 'rtos_sys_i/axis_data_fifo_1'
-Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axis_data_fifo_1_0/rtos_sys_axis_data_fifo_1_0/rtos_sys_axis_data_fifo_1_0_in_context.xdc] for cell 'rtos_sys_i/axis_data_fifo_1'
-Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_dma_1_0/rtos_sys_axi_dma_1_0/rtos_sys_axi_dma_1_0_in_context.xdc] for cell 'rtos_sys_i/axi_dma_1'
-Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_dma_1_0/rtos_sys_axi_dma_1_0/rtos_sys_axi_dma_1_0_in_context.xdc] for cell 'rtos_sys_i/axi_dma_1'
+Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axis_data_fifo_1_0/rtos_sys_axis_data_fifo_1_0/rtos_sys_axis_data_fifo_0_0_in_context.xdc] for cell 'rtos_sys_i/axis_data_fifo_1'
+Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axis_data_fifo_1_0/rtos_sys_axis_data_fifo_1_0/rtos_sys_axis_data_fifo_0_0_in_context.xdc] for cell 'rtos_sys_i/axis_data_fifo_1'
+Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_dma_1_0/rtos_sys_axi_dma_1_0/rtos_sys_axi_dma_0_0_in_context.xdc] for cell 'rtos_sys_i/axi_dma_1'
+Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_dma_1_0/rtos_sys_axi_dma_1_0/rtos_sys_axi_dma_0_0_in_context.xdc] for cell 'rtos_sys_i/axi_dma_1'
 Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_smc_0/rtos_sys_axi_smc_0/rtos_sys_axi_smc_0_in_context.xdc] for cell 'rtos_sys_i/axi_smc'
 Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_smc_0/rtos_sys_axi_smc_0/rtos_sys_axi_smc_0_in_context.xdc] for cell 'rtos_sys_i/axi_smc'
 Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_rst_ps7_0_50M_0/rtos_sys_rst_ps7_0_50M_0/rtos_sys_rst_ps7_0_50M_0_in_context.xdc] for cell 'rtos_sys_i/rst_ps7_0_50M'
 Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_rst_ps7_0_50M_0/rtos_sys_rst_ps7_0_50M_0/rtos_sys_rst_ps7_0_50M_0_in_context.xdc] for cell 'rtos_sys_i/rst_ps7_0_50M'
 Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_xbar_0/rtos_sys_axi_mem_intercon_imp_xbar_0/rtos_sys_axi_mem_intercon_imp_xbar_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/xbar'
 Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_xbar_0/rtos_sys_axi_mem_intercon_imp_xbar_0/rtos_sys_axi_mem_intercon_imp_xbar_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/xbar'
-Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_us_0/rtos_sys_axi_mem_intercon_imp_auto_us_0/rtos_sys_axi_mem_intercon_imp_auto_us_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/s00_couplers/auto_us'
-Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_us_0/rtos_sys_axi_mem_intercon_imp_auto_us_0/rtos_sys_axi_mem_intercon_imp_auto_us_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/s00_couplers/auto_us'
-Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/m00_couplers/auto_pc'
-Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/m00_couplers/auto_pc'
-Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_1/rtos_sys_axi_mem_intercon_imp_auto_pc_1/rtos_sys_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/m01_couplers/auto_pc'
-Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_1/rtos_sys_axi_mem_intercon_imp_auto_pc_1/rtos_sys_axi_mem_intercon_imp_auto_pc_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/m01_couplers/auto_pc'
+Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/m00_couplers/auto_pc'
+Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/m00_couplers/auto_pc'
+Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_1/rtos_sys_axi_mem_intercon_imp_auto_pc_1/rtos_sys_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/m01_couplers/auto_pc'
+Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_1/rtos_sys_axi_mem_intercon_imp_auto_pc_1/rtos_sys_axi_mem_intercon_imp_auto_pc_1_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/m01_couplers/auto_pc'
 Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_s00_mmu_0/rtos_sys_axi_mem_intercon_imp_s00_mmu_0/rtos_sys_axi_mem_intercon_imp_s00_mmu_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/s00_mmu'
 Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_s00_mmu_0/rtos_sys_axi_mem_intercon_imp_s00_mmu_0/rtos_sys_axi_mem_intercon_imp_s00_mmu_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/s00_mmu'
 Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_s01_mmu_0/rtos_sys_axi_mem_intercon_imp_s01_mmu_0/rtos_sys_axi_mem_intercon_imp_s01_mmu_0_in_context.xdc] for cell 'rtos_sys_i/axi_mem_intercon/s01_mmu'
@@ -320,23 +314,23 @@ Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/dont_touc
 Finished Parsing XDC File [/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2148.051 ; gain = 0.000 ; free physical = 20492 ; free virtual = 29559
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2145.156 ; gain = 0.000 ; free physical = 14355 ; free virtual = 26160
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2148.051 ; gain = 0.000 ; free physical = 20492 ; free virtual = 29559
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2145.156 ; gain = 0.000 ; free physical = 14355 ; free virtual = 26160
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2148.051 ; gain = 491.910 ; free physical = 20509 ; free virtual = 29577
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2145.156 ; gain = 461.910 ; free physical = 14458 ; free virtual = 26262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z007sclg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2156.055 ; gain = 499.914 ; free physical = 20509 ; free virtual = 29577
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2153.160 ; gain = 469.914 ; free physical = 14458 ; free virtual = 26262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -613,7 +607,6 @@ Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/xlconcat_0. (constrain
 Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/axi_smc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/rst_ps7_0_50M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/axi_mem_intercon/xbar. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/axi_mem_intercon/m01_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/axi_mem_intercon/s00_mmu. (constraint file  auto generated constraint).
@@ -622,10 +615,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/axi_mem_intercon. (con
 Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/snow_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for rtos_sys_i/white_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2156.055 ; gain = 499.914 ; free physical = 20510 ; free virtual = 29577
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2153.160 ; gain = 469.914 ; free physical = 14458 ; free virtual = 26262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2156.055 ; gain = 499.914 ; free physical = 20510 ; free virtual = 29578
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 2153.160 ; gain = 469.914 ; free physical = 14456 ; free virtual = 26262
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -648,25 +641,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2156.055 ; gain = 499.914 ; free physical = 20517 ; free virtual = 29590
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 2153.160 ; gain = 469.914 ; free physical = 14469 ; free virtual = 26279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2216.055 ; gain = 559.914 ; free physical = 20475 ; free virtual = 29540
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2215.160 ; gain = 531.914 ; free physical = 14421 ; free virtual = 26230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2216.055 ; gain = 559.914 ; free physical = 20475 ; free virtual = 29540
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2215.160 ; gain = 531.914 ; free physical = 14421 ; free virtual = 26230
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2227.070 ; gain = 570.930 ; free physical = 20467 ; free virtual = 29533
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 2226.176 ; gain = 542.930 ; free physical = 14413 ; free virtual = 26223
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -684,37 +677,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2395.883 ; gain = 739.742 ; free physical = 20334 ; free virtual = 29400
+Finished IO Insertion : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.988 ; gain = 711.742 ; free physical = 14265 ; free virtual = 26075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2395.883 ; gain = 739.742 ; free physical = 20334 ; free virtual = 29400
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.988 ; gain = 711.742 ; free physical = 14265 ; free virtual = 26075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2395.883 ; gain = 739.742 ; free physical = 20334 ; free virtual = 29400
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.988 ; gain = 711.742 ; free physical = 14265 ; free virtual = 26075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2395.883 ; gain = 739.742 ; free physical = 20334 ; free virtual = 29400
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.988 ; gain = 711.742 ; free physical = 14265 ; free virtual = 26075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2395.883 ; gain = 739.742 ; free physical = 20334 ; free virtual = 29400
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.988 ; gain = 711.742 ; free physical = 14265 ; free virtual = 26075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2395.883 ; gain = 739.742 ; free physical = 20334 ; free virtual = 29400
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.988 ; gain = 711.742 ; free physical = 14265 ; free virtual = 26075
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -733,14 +726,13 @@ Report BlackBoxes:
 |7     |rtos_sys_axi_mem_intercon_imp_xbar_0    |         1|
 |8     |rtos_sys_axi_mem_intercon_imp_auto_pc_0 |         1|
 |9     |rtos_sys_axi_mem_intercon_imp_auto_pc_1 |         1|
-|10    |rtos_sys_axi_mem_intercon_imp_auto_us_0 |         1|
-|11    |rtos_sys_axi_smc_0                      |         1|
-|12    |rtos_sys_axis_data_fifo_0_0             |         1|
-|13    |rtos_sys_axis_data_fifo_1_0             |         1|
-|14    |rtos_sys_processing_system7_0_0         |         1|
-|15    |rtos_sys_rst_ps7_0_50M_0                |         1|
-|16    |rtos_sys_snow_0_0                       |         1|
-|17    |rtos_sys_white_0_0                      |         1|
+|10    |rtos_sys_axi_smc_0                      |         1|
+|11    |rtos_sys_axis_data_fifo_0_0             |         1|
+|12    |rtos_sys_axis_data_fifo_1_0             |         1|
+|13    |rtos_sys_processing_system7_0_0         |         1|
+|14    |rtos_sys_rst_ps7_0_50M_0                |         1|
+|15    |rtos_sys_snow_0_0                       |         1|
+|16    |rtos_sys_white_0_0                      |         1|
 +------+----------------------------------------+----------+
 
 Report Cell Usage: 
@@ -752,45 +744,44 @@ Report Cell Usage:
 |3     |rtos_sys_axi_gpio_0                   |     1|
 |4     |rtos_sys_axi_gpio_1                   |     1|
 |5     |rtos_sys_axi_mem_intercon_imp_auto_pc |     2|
-|7     |rtos_sys_axi_mem_intercon_imp_auto_us |     1|
-|8     |rtos_sys_axi_mem_intercon_imp_s00_mmu |     1|
-|9     |rtos_sys_axi_mem_intercon_imp_s01_mmu |     1|
-|10    |rtos_sys_axi_mem_intercon_imp_xbar    |     1|
-|11    |rtos_sys_axi_smc                      |     1|
-|12    |rtos_sys_axis_data_fifo_0             |     1|
-|13    |rtos_sys_axis_data_fifo_1             |     1|
-|14    |rtos_sys_processing_system7_0         |     1|
-|15    |rtos_sys_rst_ps7_0_50M                |     1|
-|16    |rtos_sys_snow_0                       |     1|
-|17    |rtos_sys_white_0                      |     1|
-|18    |IBUF                                  |     2|
-|19    |IOBUF                                 |     2|
+|7     |rtos_sys_axi_mem_intercon_imp_s00_mmu |     1|
+|8     |rtos_sys_axi_mem_intercon_imp_s01_mmu |     1|
+|9     |rtos_sys_axi_mem_intercon_imp_xbar    |     1|
+|10    |rtos_sys_axi_smc                      |     1|
+|11    |rtos_sys_axis_data_fifo_0             |     1|
+|12    |rtos_sys_axis_data_fifo_1             |     1|
+|13    |rtos_sys_processing_system7_0         |     1|
+|14    |rtos_sys_rst_ps7_0_50M                |     1|
+|15    |rtos_sys_snow_0                       |     1|
+|16    |rtos_sys_white_0                      |     1|
+|17    |IBUF                                  |     2|
+|18    |IOBUF                                 |     2|
 +------+--------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2395.883 ; gain = 739.742 ; free physical = 20334 ; free virtual = 29400
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.988 ; gain = 711.742 ; free physical = 14265 ; free virtual = 26075
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 19 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2395.883 ; gain = 674.941 ; free physical = 20334 ; free virtual = 29400
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 2395.891 ; gain = 739.742 ; free physical = 20334 ; free virtual = 29399
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 2394.988 ; gain = 653.879 ; free physical = 14265 ; free virtual = 26075
+Synthesis Optimization Complete : Time (s): cpu = 00:00:17 ; elapsed = 00:00:17 . Memory (MB): peak = 2394.996 ; gain = 711.742 ; free physical = 14265 ; free virtual = 26075
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2395.891 ; gain = 0.000 ; free physical = 20510 ; free virtual = 29575
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2394.996 ; gain = 0.000 ; free physical = 14375 ; free virtual = 26185
 INFO: [Netlist 29-17] Analyzing 2 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2395.891 ; gain = 0.000 ; free physical = 20523 ; free virtual = 29589
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2394.996 ; gain = 0.000 ; free physical = 14435 ; free virtual = 26244
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 2 instances were transformed.
   IOBUF => IOBUF (IBUF, OBUFT): 2 instances
 
-Synth Design complete | Checksum: ff4c1e51
+Synth Design complete | Checksum: 8f3ae308
 INFO: [Common 17-83] Releasing license: Synthesis
-82 Infos, 171 Warnings, 0 Critical Warnings and 0 Errors encountered.
+80 Infos, 169 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 2395.891 ; gain = 963.859 ; free physical = 20523 ; free virtual = 29588
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1601.959; main = 1601.959; forked = 267.439
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3073.047; main = 2395.887; forked = 916.988
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2419.895 ; gain = 0.000 ; free physical = 20523 ; free virtual = 29588
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:24 . Memory (MB): peak = 2394.996 ; gain = 927.859 ; free physical = 14434 ; free virtual = 26244
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1601.696; main = 1601.696; forked = 267.758
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3070.148; main = 2394.992; forked = 916.984
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2419.000 ; gain = 0.000 ; free physical = 14434 ; free virtual = 26244
 INFO: [Common 17-1381] The checkpoint '/home/ej3b/readoutsys/rtos_sys/rtos_sys.runs/synth_1/rtos_sys_wrapper.dcp' has been generated.
 INFO: [Vivado 12-24828] Executing command : report_utilization -file rtos_sys_wrapper_utilization_synth.rpt -pb rtos_sys_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Sep  7 14:54:37 2025...
+INFO: [Common 17-206] Exiting Vivado at Thu Sep 18 13:21:24 2025...

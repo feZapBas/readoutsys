@@ -257,29 +257,54 @@ void main_thread(void *p)
 	vTaskDelete(NULL);
 	return;
 }
+extern void vTcpTask(void *pvParameters);
+
+extern struct netif server_netif;
+#define THREAD_STACKSIZE 2048
+#define DEFAULT_THREAD_PRIO 2
+
+/* Handles de tareas */
+extern TaskHandle_t main_thread_handle;
 
 int main(void) {
-    // Inicializar DMA y GPIO
+
+    xil_printf("System starting...\r\n");
+
+    /***** 1. Inicializar DMA y GPIO *****/
     if (dma_initialization() != XST_SUCCESS) {
         xil_printf("DMA initialization failed!\r\n");
         while (1);
     }
 
-    // Crear tarea DMA (sin tpcb por ahora, ajusta si necesitas lwIP)
-    xTaskCreate(vDmaTask, "DmaTask", 256, NULL, 2, NULL);
-
-    /* Crea la tarea que maneja IIC */
+    /***** 2. Inicializar I2C ****
     if (StartIICTask() != pdPASS) {
         xil_printf("Failed to create IIC task\r\n");
         while(1);
-    }
-    // Crear tarea de red
-    main_thread_handle = sys_thread_new("main_thread", main_thread, 0,
-                                       THREAD_STACKSIZE, DEFAULT_THREAD_PRIO);
+    }*/
 
-    // Iniciar scheduler
+    /***** 3. Inicializar lwIP *****/
+	main_thread_handle = sys_thread_new("main_thread", main_thread, 0,
+			THREAD_STACKSIZE,
+			DEFAULT_THREAD_PRIO);
+   // lwip_init();  // inicializa la pila TCP/IP
+    xil_printf("lwIP initialized.\r\n");
+
+    // Esperar a que la interfaz de red tenga IP (si DHCP o estática configurada)
+   /* while (server_netif.ip_addr.addr == 0) {
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+    xil_printf("Network ready. IP: %s\r\n", ipaddr_ntoa(&server_netif.ip_addr));
+*/
+    /***** 4. Crear tarea TCP ****
+    xTaskCreate(vTcpTask, "TcpTask", THREAD_STACKSIZE, NULL, DEFAULT_THREAD_PRIO, NULL);
+*/
+    /***** 5. Crear tarea DMA *****/
+    xTaskCreate(vDmaTask, "DmaTask", 1024, NULL, 2, NULL);
+
+    /***** 6. Iniciar scheduler *****/
     vTaskStartScheduler();
 
-    while (1);
+    while (1); // nunca debería llegar aquí
     return 0;
 }
+

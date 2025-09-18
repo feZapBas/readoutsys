@@ -48,9 +48,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rtos_sys_sn
 # IP: bd/rtos_sys/ip/rtos_sys_white_0_0/rtos_sys_white_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rtos_sys_white_0_0 || ORIG_REF_NAME==rtos_sys_white_0_0} -quiet] -quiet
 
-# IP: bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_us_0/rtos_sys_axi_mem_intercon_imp_auto_us_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rtos_sys_axi_mem_intercon_imp_auto_us_0 || ORIG_REF_NAME==rtos_sys_axi_mem_intercon_imp_auto_us_0} -quiet] -quiet
-
 # IP: bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_0/rtos_sys_axi_mem_intercon_imp_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==rtos_sys_axi_mem_intercon_imp_auto_pc_0 || ORIG_REF_NAME==rtos_sys_axi_mem_intercon_imp_auto_pc_0} -quiet] -quiet
 

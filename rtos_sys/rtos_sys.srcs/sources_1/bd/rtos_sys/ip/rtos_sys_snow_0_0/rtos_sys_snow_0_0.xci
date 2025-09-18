@@ -39,8 +39,8 @@
         "clk": [ { "direction": "in" } ],
         "enable": [ { "direction": "in" } ],
         "axis_tready": [ { "direction": "in", "driver_value": "1" } ],
-        "axis_tdata": [ { "direction": "out", "size_left": "63", "size_right": "0" } ],
-        "axis_tkeep": [ { "direction": "out", "size_left": "7", "size_right": "0" } ],
+        "axis_tdata": [ { "direction": "out", "size_left": "31", "size_right": "0" } ],
+        "axis_tkeep": [ { "direction": "out", "size_left": "3", "size_right": "0" } ],
         "axis_tvalid": [ { "direction": "out" } ],
         "axis_tlast": [ { "direction": "out" } ]
       },
@@ -50,7 +50,7 @@
           "abstraction_type": "xilinx.com:interface:axis_rtl:1.0",
           "mode": "master",
           "parameters": {
-            "TDATA_NUM_BYTES": [ { "value": "8", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
+            "TDATA_NUM_BYTES": [ { "value": "4", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "TDEST_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "TID_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],
             "TUSER_WIDTH": [ { "value": "0", "value_src": "constant", "value_permission": "bd_and_user", "resolve_type": "generated", "format": "long", "is_ips_inferred": true, "is_static_object": false } ],

@@ -377,7 +377,7 @@
       bit  [1 : 0] S_AXI_HP0_RRESP;
       bit  [5 : 0] S_AXI_HP0_BID;
       bit  [5 : 0] S_AXI_HP0_RID;
-      bit  [63 : 0] S_AXI_HP0_RDATA;
+      bit  [31 : 0] S_AXI_HP0_RDATA;
       bit  [7 : 0] S_AXI_HP0_RCOUNT;
       bit  [7 : 0] S_AXI_HP0_WCOUNT;
       bit  [2 : 0] S_AXI_HP0_RACOUNT;
@@ -410,8 +410,8 @@
       bit  [5 : 0] S_AXI_HP0_ARID;
       bit  [5 : 0] S_AXI_HP0_AWID;
       bit  [5 : 0] S_AXI_HP0_WID;
-      bit  [63 : 0] S_AXI_HP0_WDATA;
-      bit  [7 : 0] S_AXI_HP0_WSTRB;
+      bit  [31 : 0] S_AXI_HP0_WDATA;
+      bit  [3 : 0] S_AXI_HP0_WSTRB;
       bit  S_AXI_HP1_ARREADY;
       bit  S_AXI_HP1_AWREADY;
       bit  S_AXI_HP1_BVALID;
@@ -422,7 +422,7 @@
       bit  [1 : 0] S_AXI_HP1_RRESP;
       bit  [5 : 0] S_AXI_HP1_BID;
       bit  [5 : 0] S_AXI_HP1_RID;
-      bit  [63 : 0] S_AXI_HP1_RDATA;
+      bit  [31 : 0] S_AXI_HP1_RDATA;
       bit  [7 : 0] S_AXI_HP1_RCOUNT;
       bit  [7 : 0] S_AXI_HP1_WCOUNT;
       bit  [2 : 0] S_AXI_HP1_RACOUNT;
@@ -455,8 +455,8 @@
       bit  [5 : 0] S_AXI_HP1_ARID;
       bit  [5 : 0] S_AXI_HP1_AWID;
       bit  [5 : 0] S_AXI_HP1_WID;
-      bit  [63 : 0] S_AXI_HP1_WDATA;
-      bit  [7 : 0] S_AXI_HP1_WSTRB;
+      bit  [31 : 0] S_AXI_HP1_WDATA;
+      bit  [3 : 0] S_AXI_HP1_WSTRB;
       bit  S_AXI_HP2_ARREADY;
       bit  S_AXI_HP2_AWREADY;
       bit  S_AXI_HP2_BVALID;
@@ -865,9 +865,9 @@
       parameter C_S_AXI_GP1_ID_WIDTH = 6;
       parameter C_S_AXI_ACP_ID_WIDTH = 3;
       parameter C_S_AXI_HP0_ID_WIDTH = 6;
-      parameter C_S_AXI_HP0_DATA_WIDTH = 64;
+      parameter C_S_AXI_HP0_DATA_WIDTH = 32;
       parameter C_S_AXI_HP1_ID_WIDTH = 6;
-      parameter C_S_AXI_HP1_DATA_WIDTH = 64;
+      parameter C_S_AXI_HP1_DATA_WIDTH = 32;
       parameter C_S_AXI_HP2_ID_WIDTH = 6;
       parameter C_S_AXI_HP2_DATA_WIDTH = 64;
       parameter C_S_AXI_HP3_ID_WIDTH = 6;
@@ -960,7 +960,7 @@
       output  [1 : 0] S_AXI_HP0_RRESP;
       output  [5 : 0] S_AXI_HP0_BID;
       output  [5 : 0] S_AXI_HP0_RID;
-      output  [63 : 0] S_AXI_HP0_RDATA;
+      output  [31 : 0] S_AXI_HP0_RDATA;
       output  [7 : 0] S_AXI_HP0_RCOUNT;
       output  [7 : 0] S_AXI_HP0_WCOUNT;
       output  [2 : 0] S_AXI_HP0_RACOUNT;
@@ -993,8 +993,8 @@
       input  [5 : 0] S_AXI_HP0_ARID;
       input  [5 : 0] S_AXI_HP0_AWID;
       input  [5 : 0] S_AXI_HP0_WID;
-      input  [63 : 0] S_AXI_HP0_WDATA;
-      input  [7 : 0] S_AXI_HP0_WSTRB;
+      input  [31 : 0] S_AXI_HP0_WDATA;
+      input  [3 : 0] S_AXI_HP0_WSTRB;
       output  S_AXI_HP1_ARREADY;
       output  S_AXI_HP1_AWREADY;
       output  S_AXI_HP1_BVALID;
@@ -1005,7 +1005,7 @@
       output  [1 : 0] S_AXI_HP1_RRESP;
       output  [5 : 0] S_AXI_HP1_BID;
       output  [5 : 0] S_AXI_HP1_RID;
-      output  [63 : 0] S_AXI_HP1_RDATA;
+      output  [31 : 0] S_AXI_HP1_RDATA;
       output  [7 : 0] S_AXI_HP1_RCOUNT;
       output  [7 : 0] S_AXI_HP1_WCOUNT;
       output  [2 : 0] S_AXI_HP1_RACOUNT;
@@ -1038,8 +1038,8 @@
       input  [5 : 0] S_AXI_HP1_ARID;
       input  [5 : 0] S_AXI_HP1_AWID;
       input  [5 : 0] S_AXI_HP1_WID;
-      input  [63 : 0] S_AXI_HP1_WDATA;
-      input  [7 : 0] S_AXI_HP1_WSTRB;
+      input  [31 : 0] S_AXI_HP1_WDATA;
+      input  [3 : 0] S_AXI_HP1_WSTRB;
       input  [1 : 0] IRQ_F2P;
       output  FCLK_CLK0;
       output  FCLK_RESET0_N;
@@ -1110,7 +1110,7 @@
       reg [1 : 0] S_AXI_HP0_RRESP;
       reg [5 : 0] S_AXI_HP0_BID;
       reg [5 : 0] S_AXI_HP0_RID;
-      reg [63 : 0] S_AXI_HP0_RDATA;
+      reg [31 : 0] S_AXI_HP0_RDATA;
       reg [7 : 0] S_AXI_HP0_RCOUNT;
       reg [7 : 0] S_AXI_HP0_WCOUNT;
       reg [2 : 0] S_AXI_HP0_RACOUNT;
@@ -1125,7 +1125,7 @@
       reg [1 : 0] S_AXI_HP1_RRESP;
       reg [5 : 0] S_AXI_HP1_BID;
       reg [5 : 0] S_AXI_HP1_RID;
-      reg [63 : 0] S_AXI_HP1_RDATA;
+      reg [31 : 0] S_AXI_HP1_RDATA;
       reg [7 : 0] S_AXI_HP1_RCOUNT;
       reg [7 : 0] S_AXI_HP1_WCOUNT;
       reg [2 : 0] S_AXI_HP1_RACOUNT;
@@ -1202,8 +1202,8 @@ input bit [2 : 0] S_AXI_HP0_AWPROT,
 input bit [3 : 0] S_AXI_HP0_AWQOS,
 input bit S_AXI_HP0_AWVALID,
 input bit [5 : 0] S_AXI_HP0_WID,
-input bit [63 : 0] S_AXI_HP0_WDATA,
-input bit [7 : 0] S_AXI_HP0_WSTRB,
+input bit [31 : 0] S_AXI_HP0_WDATA,
+input bit [3 : 0] S_AXI_HP0_WSTRB,
 input bit S_AXI_HP0_WLAST,
 input bit S_AXI_HP0_WVALID,
 input bit S_AXI_HP0_BREADY,
@@ -1227,7 +1227,7 @@ output bit [1 : 0] S_AXI_HP0_BRESP,
 output bit S_AXI_HP0_BVALID,
 output bit S_AXI_HP0_ARREADY,
 output bit [5 : 0] S_AXI_HP0_RID,
-output bit [63 : 0] S_AXI_HP0_RDATA,
+output bit [31 : 0] S_AXI_HP0_RDATA,
 output bit [1 : 0] S_AXI_HP0_RRESP,
 output bit S_AXI_HP0_RLAST,
 output bit S_AXI_HP0_RVALID
@@ -1246,8 +1246,8 @@ input bit [2 : 0] S_AXI_HP1_AWPROT,
 input bit [3 : 0] S_AXI_HP1_AWQOS,
 input bit S_AXI_HP1_AWVALID,
 input bit [5 : 0] S_AXI_HP1_WID,
-input bit [63 : 0] S_AXI_HP1_WDATA,
-input bit [7 : 0] S_AXI_HP1_WSTRB,
+input bit [31 : 0] S_AXI_HP1_WDATA,
+input bit [3 : 0] S_AXI_HP1_WSTRB,
 input bit S_AXI_HP1_WLAST,
 input bit S_AXI_HP1_WVALID,
 input bit S_AXI_HP1_BREADY,
@@ -1271,7 +1271,7 @@ output bit [1 : 0] S_AXI_HP1_BRESP,
 output bit S_AXI_HP1_BVALID,
 output bit S_AXI_HP1_ARREADY,
 output bit [5 : 0] S_AXI_HP1_RID,
-output bit [63 : 0] S_AXI_HP1_RDATA,
+output bit [31 : 0] S_AXI_HP1_RDATA,
 output bit [1 : 0] S_AXI_HP1_RRESP,
 output bit S_AXI_HP1_RLAST,
 output bit S_AXI_HP1_RVALID

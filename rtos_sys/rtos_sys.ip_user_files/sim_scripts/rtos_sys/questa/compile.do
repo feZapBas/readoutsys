@@ -29,9 +29,6 @@ vlib questa_lib/msim/generic_baseblocks_v2_1_2
 vlib questa_lib/msim/axi_data_fifo_v2_1_32
 vlib questa_lib/msim/axi_crossbar_v2_1_34
 vlib questa_lib/msim/axi_protocol_converter_v2_1_33
-vlib questa_lib/msim/axi_clock_converter_v2_1_32
-vlib questa_lib/msim/blk_mem_gen_v8_4_9
-vlib questa_lib/msim/axi_dwidth_converter_v2_1_33
 vlib questa_lib/msim/axi_mmu_v2_1_31
 
 vmap xilinx_vip questa_lib/msim/xilinx_vip
@@ -62,9 +59,6 @@ vmap generic_baseblocks_v2_1_2 questa_lib/msim/generic_baseblocks_v2_1_2
 vmap axi_data_fifo_v2_1_32 questa_lib/msim/axi_data_fifo_v2_1_32
 vmap axi_crossbar_v2_1_34 questa_lib/msim/axi_crossbar_v2_1_34
 vmap axi_protocol_converter_v2_1_33 questa_lib/msim/axi_protocol_converter_v2_1_33
-vmap axi_clock_converter_v2_1_32 questa_lib/msim/axi_clock_converter_v2_1_32
-vmap blk_mem_gen_v8_4_9 questa_lib/msim/blk_mem_gen_v8_4_9
-vmap axi_dwidth_converter_v2_1_33 questa_lib/msim/axi_dwidth_converter_v2_1_33
 vmap axi_mmu_v2_1_31 questa_lib/msim/axi_mmu_v2_1_31
 
 vlog -work xilinx_vip -64 -incr -mfcu  -sv -L axi_vip_v1_1_19 -L smartconnect_v1_0 -L processing_system7_vip_v1_0_21 -L xilinx_vip "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
@@ -162,6 +156,7 @@ vlog -work xlconcat_v2_1_6 -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/so
 
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
 "../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_xlconcat_0_0/sim/rtos_sys_xlconcat_0_0.v" \
+"../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_smc_0/bd_0/sim/bd_9f2a.v" \
 
 vlog -work xlconstant_v1_1_9 -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
 "../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/e2d2/hdl/xlconstant_v1_1_vl_rfs.v" \
@@ -268,9 +263,6 @@ vlog -work xil_defaultlib -64 -incr -mfcu  -sv -L axi_vip_v1_1_19 -L smartconnec
 "../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_smc_0/bd_0/ip/ip_52/sim/bd_9f2a_m03bn_0.sv" \
 "../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_smc_0/bd_0/ip/ip_53/sim/bd_9f2a_m03e_0.sv" \
 
-vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
-"../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_smc_0/bd_0/sim/bd_9f2a.v" \
-
 vlog -work axi_register_slice_v2_1_33 -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
 "../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/3ee4/hdl/axi_register_slice_v2_1_vl_rfs.v" \
 
@@ -297,17 +289,7 @@ vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sou
 vlog -work axi_protocol_converter_v2_1_33 -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
 "../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/27ae/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \
 
-vlog -work axi_clock_converter_v2_1_32 -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
-"../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/a4e8/hdl/axi_clock_converter_v2_1_vl_rfs.v" \
-
-vlog -work blk_mem_gen_v8_4_9 -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
-"../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/5ec1/simulation/blk_mem_gen_v8_4.v" \
-
-vlog -work axi_dwidth_converter_v2_1_33 -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
-"../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/d794/hdl/axi_dwidth_converter_v2_1_vl_rfs.v" \
-
 vlog -work xil_defaultlib -64 -incr -mfcu  "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/ec67/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/86fe/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/434f/hdl" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/f0b6/hdl/verilog" "+incdir+../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ipshared/0127/hdl/verilog" "+incdir+/media/ej3b/PROGRAMS/tool/Vivado/2024.2/data/xilinx_vip/include" \
-"../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_us_0/sim/rtos_sys_axi_mem_intercon_imp_auto_us_0.v" \
 "../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_0/sim/rtos_sys_axi_mem_intercon_imp_auto_pc_0.v" \
 "../../../../rtos_sys.gen/sources_1/bd/rtos_sys/ip/rtos_sys_axi_mem_intercon_imp_auto_pc_1/sim/rtos_sys_axi_mem_intercon_imp_auto_pc_1.v" \
 

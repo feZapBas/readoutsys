@@ -83,9 +83,9 @@ rtos_sys_processing_system7_0_0_sc::rtos_sys_processing_system7_0_0_sc(const sc_
     model_param_props.addLong("C_S_AXI_GP1_ID_WIDTH", "6");
     model_param_props.addLong("C_S_AXI_ACP_ID_WIDTH", "3");
     model_param_props.addLong("C_S_AXI_HP0_ID_WIDTH", "6");
-    model_param_props.addLong("C_S_AXI_HP0_DATA_WIDTH", "64");
+    model_param_props.addLong("C_S_AXI_HP0_DATA_WIDTH", "32");
     model_param_props.addLong("C_S_AXI_HP1_ID_WIDTH", "6");
-    model_param_props.addLong("C_S_AXI_HP1_DATA_WIDTH", "64");
+    model_param_props.addLong("C_S_AXI_HP1_DATA_WIDTH", "32");
     model_param_props.addLong("C_S_AXI_HP2_ID_WIDTH", "6");
     model_param_props.addLong("C_S_AXI_HP2_DATA_WIDTH", "64");
     model_param_props.addLong("C_S_AXI_HP3_ID_WIDTH", "6");

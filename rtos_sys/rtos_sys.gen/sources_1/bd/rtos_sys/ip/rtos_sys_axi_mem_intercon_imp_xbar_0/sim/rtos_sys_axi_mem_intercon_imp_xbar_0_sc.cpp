@@ -65,7 +65,7 @@ rtos_sys_axi_mem_intercon_imp_xbar_0_sc::rtos_sys_axi_mem_intercon_imp_xbar_0_sc
     model_param_props.addLong("C_NUM_MASTER_SLOTS", "2");
     model_param_props.addLong("C_AXI_ID_WIDTH", "1");
     model_param_props.addLong("C_AXI_ADDR_WIDTH", "32");
-    model_param_props.addLong("C_AXI_DATA_WIDTH", "64");
+    model_param_props.addLong("C_AXI_DATA_WIDTH", "32");
     model_param_props.addLong("C_AXI_PROTOCOL", "0");
     model_param_props.addLong("C_NUM_ADDR_RANGES", "2");
     model_param_props.addLong("C_AXI_SUPPORTS_USER_SIGNALS", "0");

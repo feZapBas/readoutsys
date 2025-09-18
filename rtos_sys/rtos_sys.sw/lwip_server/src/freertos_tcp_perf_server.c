@@ -30,9 +30,52 @@
 
 extern struct netif server_netif;
 static struct perf_stats server;
+#include "lwip/sockets.h"
+#include "lwip/sys.h"
+#include "dma_write.h"
+
+#define TCP_CONN_PORT 5001
+void vTcpTask(void *pvParameters) {
+    int sock, new_sd;
+    struct sockaddr_in address, remote;
+    int size = sizeof(remote);
+
+    sock = lwip_socket(AF_INET, SOCK_STREAM, 0);
+    if (sock < 0) { xil_printf("Error creating socket\n\r"); goto failed; }
+
+    address.sin_family = AF_INET;
+    address.sin_port = htons(TCP_CONN_PORT);
+    address.sin_addr.s_addr = INADDR_ANY;
+
+    if (bind(sock, (struct sockaddr*)&address, sizeof(address)) < 0) { xil_printf("Bind failed\n\r"); goto failed; }
+    if (listen(sock, 1) < 0) { xil_printf("Listen failed\n\r"); goto failed; }
+
+    xil_printf("TCP server listening on port %d\n\r", TCP_CONN_PORT);
+/*
+    while (1) {
+        new_sd = accept(sock, (struct sockaddr*)&remote, (socklen_t*)&size);
+        if (new_sd > 0) {
+            xil_printf("Client connected\n\r");
+            // Notificar a tarea DMA del socket
+            setTcpSocketForDma(new_sd);  // función segura que guarda socket y da semáforo
+        }
+    }*/
+    new_sd = accept(sock, (struct sockaddr*)&remote, (socklen_t*)&size);
+    if (new_sd > 0) {
+        xil_printf("Client connected\n\r");
+        // Pasa el socket a la tarea DMA
+        xTaskCreate(vDmaTask, "DmaTask", 1024, (void*)(uintptr_t)new_sd, 2, NULL);
+    }
+
+failed:
+    // No retornar, quedarse en bucle infinito
+    for(;;) vTaskDelay(pdMS_TO_TICKS(1000));
+}
+
 
 /* Interval time in seconds */
 #define REPORT_INTERVAL_TIME (INTERIM_REPORT_INTERVAL * 1000)
+int tcp_client_sock = -1;   /* socket del cliente activo */
 
 void print_app_header(void)
 {
@@ -99,6 +142,17 @@ static void stats_buffer(char* outString, double data, enum measure_t type)
 	}
 	sprintf(outString, format, data, kLabel[conv]);
 }
+void tcp_send_message(const char *msg)
+{
+    if (tcp_client_sock >= 0) {
+        int ret = lwip_send(tcp_client_sock, msg, strlen(msg), 0);
+        if (ret < 0) {
+            xil_printf("Error enviando mensaje TCP\r\n");
+        }
+    } else {
+        xil_printf("No hay cliente conectado\r\n");
+    }
+}
 
 /* The report function of a TCP server session */
 static void tcp_conn_report(u64_t diff, enum report_type report_type)
@@ -144,6 +198,10 @@ void tcp_recv_perf_traffic(void *p)
 	int read_bytes;
 	int sock = *((int *)p);
 	static u64_t now;
+
+	tcp_client_sock = sock;   /* guardar socket global */
+
+
 
 	server.start_time = sys_now();
 	server.client_id++;
@@ -193,6 +251,7 @@ void tcp_recv_perf_traffic(void *p)
 
 	/* close connection */
 	close(sock);
+	tcp_client_sock = -1;     /* marcarlo como cerrado */
 	vTaskDelete(NULL);
 }
 
@@ -234,10 +293,11 @@ void start_application(void)
 	}
 
 	if (listen(sock, 1) < 0) {
-		xil_printf("TCP server: tcp_listen failed\r\n");
-		close(sock);
-		return;
+	    xil_printf("TCP server: tcp_listen failed\r\n");
+	    close(sock);
+	    return;
 	}
+	xil_printf("TCP server listening...\r\n");
 
 	size = sizeof(remote);
 
