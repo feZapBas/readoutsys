@@ -11,7 +11,7 @@ Este documento describe:
 
 ---
 
-# 🛠️ Cambios realizados (Refactor del repositorio)
+#  Cambios realizados (Refactor del repositorio)
 
 Durante esta actualización **NO se modificó ningún código funcional** del sistema.
 Solo se reorganizó el repositorio para hacerlo más limpio, portable y profesional.
