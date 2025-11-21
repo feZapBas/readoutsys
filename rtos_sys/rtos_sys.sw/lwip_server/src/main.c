@@ -276,11 +276,11 @@ int main(void) {
         while (1);
     }
 
-    /***** 2. Inicializar I2C ****
+    /***** 2. Inicializar I2C *****/
     if (StartIICTask() != pdPASS) {
         xil_printf("Failed to create IIC task\r\n");
         while(1);
-    }*/
+    }
 
     /***** 3. Inicializar lwIP *****/
 	main_thread_handle = sys_thread_new("main_thread", main_thread, 0,
@@ -289,15 +289,15 @@ int main(void) {
    // lwip_init();  // inicializa la pila TCP/IP
     xil_printf("lwIP initialized.\r\n");
 
-    // Esperar a que la interfaz de red tenga IP (si DHCP o estática configurada)
-   /* while (server_netif.ip_addr.addr == 0) {
+   /* // Este comando inicializa el dhcp. Se contempla comunicacion solo por pv4 estatica, por lo que no es necesario
+   while (server_netif.ip_addr.addr == 0) {
         vTaskDelay(pdMS_TO_TICKS(100));
     }
     xil_printf("Network ready. IP: %s\r\n", ipaddr_ntoa(&server_netif.ip_addr));
-*/
-    /***** 4. Crear tarea TCP ****
+
+    **** 4. Crear tarea TCP *****/
     xTaskCreate(vTcpTask, "TcpTask", THREAD_STACKSIZE, NULL, DEFAULT_THREAD_PRIO, NULL);
-*/
+
     /***** 5. Crear tarea DMA *****/
     xTaskCreate(vDmaTask, "DmaTask", 1024, NULL, 2, NULL);
 

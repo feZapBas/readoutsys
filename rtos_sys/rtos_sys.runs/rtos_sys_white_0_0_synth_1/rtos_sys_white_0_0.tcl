@@ -79,7 +79,7 @@ set_property ip_output_repo /home/ej3b/readoutsys/rtos_sys/rtos_sys.cache/ip [cu
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_verilog -library xil_defaultlib /media/ej3b/a1030d84-846f-4a15-9828-0951444df26f/home/ej3b/Music/project_3/andes_readout/andes_readout/andes_readout.srcs/sources_1/imports/new/white.v
+read_verilog -library xil_defaultlib /home/ej3b/Music/white.v
 read_ip -quiet /home/ej3b/readoutsys/rtos_sys/rtos_sys.srcs/sources_1/bd/rtos_sys/ip/rtos_sys_white_0_0/rtos_sys_white_0_0.xci
 
 OPTRACE "Adding files" END { }

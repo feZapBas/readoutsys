@@ -2894,3 +2894,24 @@ con
 ----------------End of Script----------------
 
 13:24:31 INFO  : Launch script is exported to file '/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/lwip_server_system/_ide/scripts/debugger_lwip_server-default.tcl'
+14:17:47 WARN  : channel "tcfchan#53" closed
+14:17:47 INFO  : Disconnected from the channel tcfchan#81.
+14:17:47 WARN  : channel "tcfchan#81" closed
+17:57:05 DEBUG : Logs will be stored at '/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/IDE.log'.
+17:57:06 INFO  : Launching XSCT server: xsct -n  -interactive /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/temp_xsdb_launch_script.tcl
+17:57:07 INFO  : Platform repository initialization has completed.
+17:57:07 INFO  : Registering command handlers for Vitis TCF services
+17:57:09 INFO  : XSCT server has started successfully.
+17:57:09 INFO  : plnx-install-location is set to ''
+17:57:09 INFO  : Successfully done setting XSCT server connection channel  
+17:57:09 INFO  : Successfully done query RDI_DATADIR 
+17:57:09 INFO  : Successfully done setting workspace for the tool. 
+18:09:33 DEBUG : Logs will be stored at '/home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/IDE.log'.
+18:09:33 INFO  : Launching XSCT server: xsct -n  -interactive /home/ej3b/readoutsys/rtos_sys/rtos_sys.sw/temp_xsdb_launch_script.tcl
+18:09:34 INFO  : Platform repository initialization has completed.
+18:09:35 INFO  : Registering command handlers for Vitis TCF services
+18:09:35 INFO  : XSCT server has started successfully.
+18:09:35 INFO  : plnx-install-location is set to ''
+18:09:35 INFO  : Successfully done setting XSCT server connection channel  
+18:09:35 INFO  : Successfully done query RDI_DATADIR 
+18:09:35 INFO  : Successfully done setting workspace for the tool. 
