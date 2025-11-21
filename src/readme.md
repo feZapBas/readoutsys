@@ -47,10 +47,9 @@ Se creó una estructura estándar tipo proyecto de firmware + FPGA:
 readoutsys/
 ├── src/               → Código C principal del servidor LWIP / FreeRTOS
 ├── include/           → Headers públicos
-├── fpga/src/          → Módulos Verilog del sistema
 ├── cmake/             → Archivos de configuración CMake
 ├── docs/              → Documentación técnica
-├── hardware/          → Archivos de plataforma o definiciones no generadas
+├── hardware/          → Módulos Verilog del sistema 
 ├── .gitignore         → Nueva versión
 └── README.md          → Este archivo
 ```
