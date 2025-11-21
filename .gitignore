@@ -1,0 +1,38 @@
+# Vivado
+*.jou
+*.log
+*.str
+*.bak
+*.xpr
+*.cache/
+*.hw/
+*.runs/
+*.sim/
+*.ip_user_files/
+*.gen/
+**/bd/*
+*.bit
+*.xsa
+
+# Vitis / SDK
+*.cproject
+*.project
+*.sprj
+*.prj
+*.metadata/
+*.settings/
+*.sdk/
+*.vitis/
+Debug/
+Release/
+workspace/
+.vscode/
+
+# Python, CMake, misc
+__pycache__/
+*.o
+*.a
+
+# System temp
+*.swp
+*.tmp
