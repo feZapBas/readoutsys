@@ -28,8 +28,8 @@ generados automáticamente por Vivado/Vitis y dejando únicamente el código fue
 
 Para simular el comportamiento de los sensores reales conectados al DMA, se desarrollaron dos módulos Verilog *dummy*:
 
-- **snow.v** – genera un conteo ascendente  
-- **white.v** – genera un conteo descendente
+- **snow.v** – genera un conteo descendente
+- **white.v** – genera un conteo ascendente
 
 Ambos módulos utilizan **AXI Stream**, facilitando la integración con el sistema.
 
