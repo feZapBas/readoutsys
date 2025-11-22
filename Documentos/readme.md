@@ -70,16 +70,14 @@ Esta arquitectura híbrida permite:
 ### 4.1 Conectividad TCP
 El primer test se realizó usando:
 
-ping 192.168.1.10
-
+> ping 192.168.1.10
 
 Confirmando que el servidor TCP estaba operativo.
 
 ### 4.2 Configuración del primer sensor vía I2C
 Una vez configurado el sensor, se transmitió vía TCP:
 
-Configuration sensor 1 successful
-
+> Configuration sensor 1 successful
 
 También se validó la comunicación I2C en baja velocidad (100 kHz).  
 Para acelerar la prueba, el pin se dejó desconectado, produciendo los **NACK esperados**, lo que permitió verificar el control de errores.
