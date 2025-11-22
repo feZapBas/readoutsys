@@ -127,8 +127,9 @@ E. El consumo medido (≈1.254 W) es adecuado para la Cora Z7 y confirma la efic
 1. Abrir Vivado  
 2. Crear un proyecto nuevo  
 3. Importar el Block Design del SoC  
-4. Importar los módulos `snow.v` y `white.v`  
-5. Regenerar el wrapper y exportar el hardware  
+4. Importar los módulos `snow.v` y `white.v`
+5. Agregar los FIFO stream transmitters y DMA y logica adiscional para establecer el correcto funcionamiento del sistema. (Revisar Block diagram en el pdf de esta misma carpeta)
+6. Regenerar el wrapper y exportar el hardware  
 
 ### 6.3 Para reconstruir el proyecto Vitis
 1. Crear plataforma a partir del `.xsa` exportado  
