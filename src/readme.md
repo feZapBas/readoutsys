@@ -175,7 +175,7 @@ En la versión anterior cada módulo (DMA e I2C) inicializaba por separado el co
 - Inicializar el GIC una sola vez y luego *conectar/habilitar* IRQs es la práctica segura y recomendada.
 
 ## Cómo integrar los cambios (pasos)
-1. En tu `main()` o rutina de arranque:
+1. En el archivo principal `main()` o rutina de arranque `zynq_interruptions`:
    ```c
    if (interrupts_init() != XST_SUCCESS) {
        xil_printf("Interrupts init failed\n\r");
