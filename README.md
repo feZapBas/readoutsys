@@ -33,7 +33,7 @@ El objetivo principal de esta reorganización fue **limpiar por completo el repo
 
 ---
 
-# 📂 Estructura del repositorio
+# Estructura del repositorio
 
 La estructura final se discute y detalla en la sección de [sources](src/).
 
@@ -59,7 +59,7 @@ La estructura final se discute y detalla en la sección de [sources](src/).
 
 ---
 
-# 🧩 Patrón de sincronización: Semáforo DMA + I2C  
+# Patrón de sincronización: Semáforo DMA + I2C  
 ### (Condition Evaluation)
 
 En el firmware se utiliza un patrón de coordinación basado en **semáforos por condición**, evitando bloqueo activo.
@@ -107,7 +107,7 @@ Este patrón:
 
 ---
 
-# 📘 Build & Run Guide (Vivado + Vitis)
+# Build & Run Guide (Vivado + Vitis)
 
 ### Requisitos
 
@@ -118,8 +118,9 @@ Este patrón:
 
 ---
 
-# 🛠️ 1. Reconstrucción del hardware (Vivado)
+# 1. Reconstrucción del hardware (Vivado)
 
+Existen dos opciones para levantar el proyecto del actual repositorio:
 ### Opción A — Abrir proyecto
 
 ```
@@ -134,8 +135,9 @@ Tools → Run Tcl Script → ./scripts/build_vivado.tcl
 
 ---
 
-# 🔧 2. Exportar hardware para Vitis
+# 2. Exportar hardware para Vitis
 
+Una vez instanciado los modulos en Vivado, se exporta el bitstream.
 ```
 File → Export → Export Hardware (Include Bitstream)
 ```
@@ -148,7 +150,9 @@ export/rtos_sys_wrapper.xsa
 
 ---
 
-# 💻 3. Compilar firmware en Vitis
+# 3. Compilar firmware en Vitis
+
+Se compila el proyecto en Vitis platform
 
 ```
 vitis -workspace ./vitis_ws
@@ -158,14 +162,15 @@ Crear plataforma → importar XSA → copiar `src/*` → compilar.
 
 ---
 
-# ▶️ 4. Programación y ejecución
+# 4. Programación y ejecución
 
+Una vez integrado el sistema, se accede al modo debugging y se puede programar la FPGA+CPU. Ademas, permite abrir consolas UART para comunicarse con la plataforma.
 1. Programar FPGA  
 2. Ejecutar desde Vitis → Launch on Hardware  
 
 ---
 
-# 🔄 Diagrama de flujo (texto)
+# Diagrama de flujo (texto)
 
 ```
 POWER ON
@@ -180,7 +185,7 @@ POWER ON
 
 ---
 
-# 👥 Créditos
+# Créditos
 
 Autora: **Fernanda Zapata Bascuñan**  
 
