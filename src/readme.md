@@ -174,7 +174,7 @@ En la versión anterior cada módulo (DMA e I2C) inicializaba por separado el co
   - dejar el GIC en estado inestable.
 - Inicializar el GIC una sola vez y luego *conectar/habilitar* IRQs es la práctica segura y recomendada.
 
-## Cómo integrar los cambios (pasos)
+## Cómo integrar ordenar las rutinas
 1. En el archivo principal `main()` o rutina de arranque `zynq_interruptions`:
    ```c
    if (interrupts_init() != XST_SUCCESS) {
@@ -185,4 +185,9 @@ En la versión anterior cada módulo (DMA e I2C) inicializaba por separado el co
    /* Inicializa drivers (DMA / IIC) */
    if (dma_initialization() != XST_SUCCESS) { ... }
    StartIICTask();
+   Se aconseja realizar esto en un unico archivo e inicializarlos antes del main.c, de forma de evitar problemas de inicializacion de los perisfericos
+## Últimos detalles y recomendaciones prácticas
+- La lógica de los semáforos **No cambio** ni la estructura de las tareas — solo se reorganizo las inicializaciones del GIC.
+- Siempre revisar que el `Makefile`/proyecto incluya `interrupts.c` al compilar y que los archivos fuente estén en las rutas esperadas.
+- Se recomienda inicializar las prioridades en el archivo dedicado a las interrupciones.
 
