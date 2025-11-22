@@ -1,8 +1,9 @@
+/* iic_task.c (versión corregida) */
+
 #include "iic_task.h"
 #include "xparameters.h"
 #include "xil_types.h"
 #include "xil_printf.h"
-#include "xscugic.h"
 #include "xiicps.h"
 #include "sleep.h"
 
@@ -10,8 +11,9 @@
 #include "task.h"
 #include "semphr.h"
 
+#include "interrupts.h" /* NEW: usar el módulo central de interrupciones */
+
 /* ------------ Constants ------------ */
-#define INTC_DEVICE_ID      XPAR_SCUGIC_SINGLE_DEVICE_ID
 #define IIC_INT_VEC_ID      XPAR_XIICPS_0_INTR
 #define IIC_SLAVE_ADDR      0x20
 #define IIC_SCLK_RATE       10000
@@ -23,8 +25,6 @@ void I2C_InterruptHandler(void *CallBackRef, u32 Event);
 
 XIicPs IicInstance;
 XIicPs_Config *ConfigPtr;
-extern XScuGic InterruptController;
-extern XScuGic_Config *GicConfig;
 
 static volatile u32 SendComplete;
 static volatile u32 RecvComplete;
@@ -61,7 +61,6 @@ static void IicTask(void *pvParameters)
     }
 
     XIicPs_SetStatusHandler(&IicInstance, &IicInstance, (XIicPs_IntrHandler)I2C_InterruptHandler);
-
 
     status = SetupInterruptSystem_iic(&IicInstance);
     if (status != XST_SUCCESS) {
@@ -136,7 +135,6 @@ static void IicTask(void *pvParameters)
             xil_printf("Timeout sending block %d\r\n", contador);
         }
 
-
         vTaskDelay(pdMS_TO_TICKS(1));
     }
 
@@ -187,31 +185,15 @@ static int SetupInterruptSystem_iic(XIicPs *IicPsPtr)
 {
     int Status;
 
-    GicConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
-    if (NULL == GicConfig) {
-        return XST_FAILURE;
-    }
-
-    Status = XScuGic_CfgInitialize(&InterruptController, GicConfig, GicConfig->CpuBaseAddress);
+    /* USAR el GIC ya inicializado en interrupts.c
+       Aquí solo conectamos el handler y habilitamos la IRQ. */
+    Status = interrupts_connect(IIC_INT_VEC_ID, (Xil_InterruptHandler) XIicPs_MasterInterruptHandler, (void *)IicPsPtr);
     if (Status != XST_SUCCESS) {
+        xil_printf("XScuGic_Connect (IIC) failed\r\n");
         return XST_FAILURE;
     }
 
-    Status = XScuGic_SelfTest(&InterruptController);
-    if (Status != XST_SUCCESS) {
-        return XST_FAILURE;
-    }
-    Xil_ExceptionInit();
-    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_IRQ_INT, (Xil_ExceptionHandler) XScuGic_InterruptHandler, &InterruptController);
-    Xil_ExceptionEnable();
-
-    Status = XScuGic_Connect(&InterruptController, IIC_INT_VEC_ID, (Xil_ExceptionHandler) XIicPs_MasterInterruptHandler, (void *)IicPsPtr);
-    if (Status != XST_SUCCESS) {
-        xil_printf("XScuGic_Connect failed\r\n");
-        return XST_FAILURE;
-    }
-
-    XScuGic_Enable(&InterruptController, IIC_INT_VEC_ID);
+    interrupts_enable(IIC_INT_VEC_ID);
     return XST_SUCCESS;
 }
 
