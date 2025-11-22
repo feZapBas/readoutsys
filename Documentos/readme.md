@@ -75,12 +75,14 @@ El primer test se realizó usando:
 Confirmando que el servidor TCP estaba operativo.
 
 ### 4.2 Configuración del primer sensor vía I2C
+Para verificar la configuración del sensor, se enviaron las palabras por I2C y se analizaron las respuestas en el handler de interrupciones del controlador I2C. Este manejador registra todas las señales relevantes del bus, incluyendo ACKs, NACKs de finalización y cualquier evento asociado a errores o pérdida de palabras en la comunicación serie.
+Dado que no se disponía de un Arduino UNO u otra placa que actuara como dispositivo esclavo, se decidió utilizar los NACKs generados por la ausencia de un receptor como mecanismo de validación. Así, se comprobó que por cada palabra enviada se recibiera un NACK correspondiente, confirmando que la secuencia de configuración se transmitió correctamente.
+
 Una vez configurado el sensor, se transmitió vía TCP:
 
 > Configuration sensor 1 successful
 
-También se validó la comunicación I2C en baja velocidad (100 kHz).  
-Para acelerar la prueba, el pin se dejó desconectado, produciendo los **NACK esperados**, lo que permitió verificar el control de errores.
+Además, se validó la comunicación I2C operando a baja velocidad (100 kHz) y se comprobó que el servidor TCP permaneciera activo durante todo el proceso, garantizando la continuidad de las comunicaciones posteriores.
 
 ### 4.3 Validación DMA (PL → PS)
 Se activaron `snow.v` y `white.v` para confirmar las transferencias DMA.
@@ -89,7 +91,9 @@ Los datos recibidos fueron mostrados por UART, verificando:
 
 - Conteo ascendente correcto (snow.v)  
 - Conteo descendente correcto (white.v)  
-- Integridad de los 1024 elementos transmitidos  
+- Integridad de los 256 elementos transmitidos.
+
+Cabe destacar que la configuración del protocolo AXI se diseñó para operar con palabras de 32 bits. Esta decisión se fundamenta en que el procesador Zynq trabaja de manera nativa con ese ancho de palabra, lo que permite una transmisión más eficiente y alineada entre el sistema embebido y la memoria DDR, reduciendo ciclos adicionales de lectura/escritura y mejorando el rendimiento general del sistema.
 
 ---
 
