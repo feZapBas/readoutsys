@@ -40,7 +40,7 @@ Estos módulos permiten validar:
 - Sincronización con el servidor TCP y con el driver I2C  
 
 Los módulos se encuentran en:
-rtos_sys/rtos_sys.hw/imports_1/  (link aca)
+([/src](src/))
 
 
 ---
