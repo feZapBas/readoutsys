@@ -152,4 +152,4 @@ proyecto-lwip server on Cora Z7
 ├──  images
 │ └── agregar
 │
-└── 📄 LICENSE
+└── LICENSE
