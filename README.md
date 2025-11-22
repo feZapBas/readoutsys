@@ -21,7 +21,7 @@ El objetivo principal de esta reorganización fue **limpiar por completo el repo
 
 ---
 
-# ✨ Objetivos del repositorio
+# Objetivos del repositorio
 
 1. Mantener una **estructura estable y mínima**, libre de carpetas generadas (`.vitis/`, `Debug/`, `workspace/`, `.runs/`, etc.).
 2. Documentar el **flujo de build Vivado/Vitis** desde cero.
