@@ -1,8 +1,9 @@
+/* dma_write.c (versión corregida) */
+
 #include "xgpio.h"
 #include "xaxidma.h"
 #include "xparameters.h"
 #include "xil_types.h"
-#include "xscugic.h"
 #include "sleep.h"
 #include "FreeRTOS.h"
 #include "task.h"
@@ -10,6 +11,8 @@
 #include "lwip/sockets.h"
 #include <string.h>
 #include <stdio.h>
+
+#include "interrupts.h" /* NEW: módulo de interrupciones centralizado */
 
 /*------------------- GLOBALS ------------------*/
 XGpio_Config *GpioCfgPtr;
@@ -37,15 +40,11 @@ u32 status;
 SemaphoreHandle_t xDma0Semaphore;
 SemaphoreHandle_t xDma1Semaphore;
 
-/* GIC */
-extern XScuGic_Config *GicConfig;
-extern XScuGic InterruptController;
-#define INTC_DEVICE_ID XPAR_SCUGIC_SINGLE_DEVICE_ID
+/* IRQ IDs (seguir usando los defines del BSP) */
 #define DMA0_RX_INTR_ID XPAR_FABRIC_AXI_DMA_0_S2MM_INTROUT_INTR
 #define DMA1_RX_INTR_ID XPAR_FABRIC_AXI_DMA_1_S2MM_INTROUT_INTR
-#include "FreeRTOS.h"
-#include "semphr.h"
 
+/* TCP/DMA */
 static int dmaTcpSocket = -1;       // socket que usará DMA
 static SemaphoreHandle_t xTcpSem;   // semáforo para notificar tarea DMA
 
@@ -71,17 +70,21 @@ SemaphoreHandle_t getTcpSemaphore(void) {
 /*------------------- CALLBACKS ------------------*/
 static void Dma0RxDoneCallback(void *CallBackRef, u32 IrqMask, int *IgnorePtr) {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    xSemaphoreGiveFromISR(xDma0Semaphore, &xHigherPriorityTaskWoken);
+    if (xDma0Semaphore) {
+        xSemaphoreGiveFromISR(xDma0Semaphore, &xHigherPriorityTaskWoken);
+    }
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 
 static void Dma1RxDoneCallback(void *CallBackRef, u32 IrqMask, int *IgnorePtr) {
     BaseType_t xHigherPriorityTaskWoken = pdFALSE;
-    xSemaphoreGiveFromISR(xDma1Semaphore, &xHigherPriorityTaskWoken);
+    if (xDma1Semaphore) {
+        xSemaphoreGiveFromISR(xDma1Semaphore, &xHigherPriorityTaskWoken);
+    }
     portYIELD_FROM_ISR(xHigherPriorityTaskWoken);
 }
 
-/* Handler de interrupciones DMA */
+/* Handler de interrupciones DMA (sigue igual) */
 void Dma0IntrHandler(void *CallbackRef) {
     u32 IrqStatus;
     int Ignore;
@@ -104,35 +107,6 @@ void Dma1IntrHandler(void *CallbackRef) {
     if (IrqStatus & XAXIDMA_IRQ_IOC_MASK) {
         Dma1RxDoneCallback(CallbackRef, IrqStatus, &Ignore);
     }
-}
-
-/*------------------- INIT INTERRUPTS ------------------*/
-int InitInterrupts(void) {
-    int Status;
-
-    GicConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
-    if (GicConfig == NULL) return XST_FAILURE;
-
-    Status = XScuGic_CfgInitialize(&InterruptController, GicConfig, GicConfig->CpuBaseAddress);
-    if (Status != XST_SUCCESS) return XST_FAILURE;
-
-    XScuGic_SetPriorityTriggerType(&InterruptController, DMA0_RX_INTR_ID, 0, 0x01);
-    XScuGic_SetPriorityTriggerType(&InterruptController, DMA1_RX_INTR_ID, 0, 0x01);
-
-    Status = XScuGic_Connect(&InterruptController, DMA0_RX_INTR_ID, (Xil_InterruptHandler)Dma0IntrHandler, &DMA0);
-    if (Status != XST_SUCCESS) return Status;
-
-    Status = XScuGic_Connect(&InterruptController, DMA1_RX_INTR_ID, (Xil_InterruptHandler)Dma1IntrHandler, &DMA1);
-    if (Status != XST_SUCCESS) return Status;
-
-    XScuGic_Enable(&InterruptController, DMA0_RX_INTR_ID);
-    XScuGic_Enable(&InterruptController, DMA1_RX_INTR_ID);
-
-    Xil_ExceptionInit();
-    Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT, (Xil_ExceptionHandler)XScuGic_InterruptHandler, &InterruptController);
-    Xil_ExceptionEnable();
-
-    return XST_SUCCESS;
 }
 
 /*------------------- DMA INIT ------------------*/
@@ -167,26 +141,38 @@ int dma_initialization(void) {
     status = XAxiDma_CfgInitialize(&DMA1, DMA1_CONFIG);
     if (status != XST_SUCCESS) return XST_FAILURE;
 
-    /* Deshabilitar interrupciones DMA antes de habilitar GIC */
+    /* Deshabilitar interrupciones DMA antes de habilitar conexiones */
     XAxiDma_IntrDisable(&DMA0, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
     XAxiDma_IntrDisable(&DMA1, XAXIDMA_IRQ_ALL_MASK, XAXIDMA_DEVICE_TO_DMA);
+
     for (int i = 0; i < DMA_TRANSFER_SIZE; i++) {
-    	data_sensor1_to_zynq[i] = 0;
-    	data_sensor2_to_zynq[i] = 0;
-    }
-    /* Inicializar interrupciones GIC */
-    if (InitInterrupts() != XST_SUCCESS) {
-        xil_printf("Interrupts initialization failed!\n\r");
-        return XST_FAILURE;
+        data_sensor1_to_zynq[i] = 0;
+        data_sensor2_to_zynq[i] = 0;
     }
 
     /* Crear semáforos */
     xDma0Semaphore = xSemaphoreCreateBinary();
     xDma1Semaphore = xSemaphoreCreateBinary();
     if (!xDma0Semaphore || !xDma1Semaphore) return XST_FAILURE;
+
+    /* NOTA: la inicialización del GIC se hace *una sola vez* externamente.
+       Aquí sólo conectamos los handlers y habilitamos las IRQs usando el módulo interrupts.c
+    */
+    if (interrupts_connect(DMA0_RX_INTR_ID, (Xil_InterruptHandler)Dma0IntrHandler, &DMA0) != XST_SUCCESS) {
+        xil_printf("Failed to connect DMA0 IRQ\n\r");
+        return XST_FAILURE;
+    }
+    interrupts_enable(DMA0_RX_INTR_ID);
+
+    if (interrupts_connect(DMA1_RX_INTR_ID, (Xil_InterruptHandler)Dma1IntrHandler, &DMA1) != XST_SUCCESS) {
+        xil_printf("Failed to connect DMA1 IRQ\n\r");
+        return XST_FAILURE;
+    }
+    interrupts_enable(DMA1_RX_INTR_ID);
+
     reset_gpio();
     xil_printf("DMA and GPIO initialized successfully.\n\r");
-XGpio_DiscreteWrite(&AxiGpio, 1, 1);
+    XGpio_DiscreteWrite(&AxiGpio, 1, 1);
     return XST_SUCCESS;
 }
 
@@ -195,7 +181,6 @@ void reset_gpio(void) {
     XGpio_DiscreteWrite(&AxiGpio, 1, 0);
     usleep(20);
     XGpio_DiscreteWrite(&AxiGpio, 1, 1);
-
 }
 
 /*------------------- DMA TASK ------------------*/
@@ -211,7 +196,7 @@ void vDmaTask(void *pvParameters) {
         for (int i = 0; i < DMA_TRANSFER_SIZE; i++) // solo los primeros 8 elementos
             xil_printf("DMA0[%d] = %u\n\r", i, data_sensor1_to_zynq[i]);
         for (int i = 0; i < DMA_TRANSFER_SIZE; i++)
-        	data_sensor1_to_zynq[i] = i;
+            data_sensor1_to_zynq[i] = i;
 
         if (xSemaphoreTake(xDma0Semaphore, portMAX_DELAY) == pdTRUE) {
             xil_printf("DMA0 done, sending data...\r\n");
@@ -223,13 +208,12 @@ void vDmaTask(void *pvParameters) {
         status1 = XAxiDma_SimpleTransfer(&DMA1, BuffAddr1, Length, XAXIDMA_DEVICE_TO_DMA);
         if (status1 != XST_SUCCESS) { xil_printf("DMA1 transfer failed!\r\n"); }
         for (int i = 0; i < DMA_TRANSFER_SIZE; i++) // solo los primeros 8 elementos
-                    xil_printf("DMA1[%d] = %u\n\r", i, data_sensor2_to_zynq[i]);
+            xil_printf("DMA1[%d] = %u\n\r", i, data_sensor2_to_zynq[i]);
         if (xSemaphoreTake(xDma1Semaphore, portMAX_DELAY) == pdTRUE) {
             xil_printf("DMA1 done, sending data...\r\n");
             int sent = lwip_write(sock, data_sensor2_to_zynq, DMA_TRANSFER_SIZE);
             if (sent < 0) { xil_printf("TCP send failed!\r\n"); break; }
         }
-
 
         vTaskDelay(pdMS_TO_TICKS(100)); // ajustar según velocidad de adquisición
     }
@@ -237,6 +221,3 @@ void vDmaTask(void *pvParameters) {
     lwip_close(sock);
     vTaskDelete(NULL);
 }
-
-
-
