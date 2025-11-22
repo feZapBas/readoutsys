@@ -67,4 +67,41 @@ Desarrollar un sistema en tiempo real capaz de:
 
 ---
 
-## Estructura del Repositorio
+**Estructura final del repositorio**
+
+A continuación se presenta la estructura reorganizada. Puedes hacer clic en cada elemento para navegar directamente dentro del repositorio.
+proyecto-lwip server on Cora Z7
+│
+├── hardware
+│ ├──  verilog
+│ │ ├── [snow.v](hardware/verilog/snow.v)
+│ │ ├── [white.v](hardware/verilog/white.v)
+│ │ ├── [timestamp.v](hardware/verilog/timestamp.v)
+│ │ ├── [T1.v](hardware/verilog/T1.v)
+│ │ └── ...
+│ ├── ip_blocks
+│ └── constraints
+│
+├── software
+│ ├── lwip_tcp_server
+│ │ ├──  [freertos_tcp_perf_server.c](src/freertos_tcp_perf_server.c)
+│ │ └── ...
+│ ├──  dma_drivers
+│ ├ ├──  [dma_write.c](src/dma_write.c)
+│ │ └── ...
+│ └──  iic_drivers
+│ ├ ├──  [iic_task.c](src/iic_task.c)
+│ │ └── ...
+│
+├──  docs
+│ ├── readme.md
+│ ├──  diagrams
+│ │ ├──  arquitectura_general.png
+│ │ └──  flujo_datos.png
+│ └──  notas_tecnicas
+│
+├──  images
+│ └── agregar
+│
+└── LICENSE
+
