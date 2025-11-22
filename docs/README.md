@@ -64,8 +64,7 @@ Cargar el programa en la placa y luego ejecutar desde la PC:
 ### IPv6
 > iperf -V -c <IP_de_la_placa>%<interfaz> -i 5 -t 300 -w 2M
 
-
-> **Nota:** Para IPv6 link-local es obligatorio especificar la interfaz.
+**Nota:** Para IPv6 link-local es obligatorio especificar la interfaz.
 
 ---
 
