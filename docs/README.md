@@ -59,3 +59,10 @@ $ iperf -V -c <Board IP address>%<interface> -i 5 -t 300 -w 2M
 
 [Note: For Link local IPv6 address, we need to specify interface in iperf to
 define the scope where the link local address is valid]
+
+
+
+Para mayor informacion, dirijase a la pagina:
+--------------------------------------------
+
+https://www.freertos.org/Documentation/03-Libraries/02-FreeRTOS-plus/02-FreeRTOS-plus-TCP/embeddedtcp
