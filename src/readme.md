@@ -65,20 +65,6 @@ Se removieron totalmente los directorios:
 
 Estos provenían de exportaciones de Vitis/Vivado.
 
-### 5. **Renombrado seguro de archivos fuente**
-
-Se renombraron archivos inconsistentes:
-
-* `Cmain.c` → `main.c`
-* `Ciic_task.c` → `iic_task.c`
-* `Cdma_write.c` → `dma_write.c`
-* `Ciic_phyreset.c` → `iic_phyreset.c`
-* `Iscript.ld` → `lscript.ld`
-
-Sin modificar contenido interno.
-
----
-
 # Estructura actual del repositorio
 
 A continuación se muestra la estructura limpia del repositorio, con vínculos internos:
