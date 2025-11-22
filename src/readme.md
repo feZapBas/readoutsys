@@ -79,12 +79,6 @@ A continuación se muestra la estructura limpia del repositorio, con vínculos i
 
   * Headers asociados a los módulos C.
 
-## **FPGA – Verilog**
-
-* [`fpga/src/`](./fpga/src)
-
-  * Módulos Verilog utilizados en el sistema.
-
 ## **Configuración y build system**
 
 * [`cmake/`](./cmake)
