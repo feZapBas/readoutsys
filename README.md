@@ -69,6 +69,6 @@ Desarrollar un sistema en tiempo real capaz de:
 
 **Estructura final del repositorio**
 
-La estructura final se discute y detalla en la seccion de sources (/src) 
+La estructura final se discute y detalla en la seccion de sources ([/src]) 
 
 
