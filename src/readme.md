@@ -11,7 +11,7 @@ Este documento describe:
 
 ---
 
-#  Cambios realizados (Refactor del repositorio)
+#  Cambios realizados 
 
 Durante esta actualización **NO se modificó ningún código funcional** del sistema.
 Solo se reorganizó el repositorio para hacerlo más limpio, portable y profesional.
@@ -153,3 +153,36 @@ proyecto-lwip server on Cora Z7
 │ └── agregar
 │
 └── LICENSE
+
+Actualizaciones en los modulos
+# Arquitectura de interrupciones y patrón DMA + I2C
+
+## Resumen del cambio
+En la versión anterior cada módulo (DMA e I2C) inicializaba por separado el controlador de interrupciones (GIC) y las excepciones del procesador. Esto provocaba que el segundo módulo que ejecutase esta inicialización sobrescribiera la configuración del primero (handlers, prioridades, tabla de excepciones), dando lugar a pérdida de IRQs, handlers que no se ejecutan y comportamiento errático.
+
+**Solución aplicada**:
+- Se creó un módulo central `interrupts.c` / `interrupts.h` que inicializa el GIC **una sola vez** (función `interrupts_init()`).
+- Cada driver (DMA, IIC) ya **no inicializa el GIC**. En su lugar:
+  - usan `interrupts_connect(irq_id, handler, arg)` para conectar su ISR, y
+  - llaman `interrupts_enable(irq_id)` para habilitar su IRQ.
+- Las ISRs siguen siendo las mismas; la lógica FreeRTOS y los semáforos de cada módulo no fueron modificados (solo reubicados las llamadas al GIC).
+
+## ¿Por qué es necesario inicializar el GIC una sola vez?
+- `XScuGic_CfgInitialize()` y `Xil_ExceptionRegisterHandler()` configuran la tabla de excepciones y estructuras internas del controlador. Ejecutar esto más de una vez con el mismo objeto global puede:
+  - sobrescribir handlers,
+  - eliminar conexiones previas,
+  - dejar el GIC en estado inestable.
+- Inicializar el GIC una sola vez y luego *conectar/habilitar* IRQs es la práctica segura y recomendada.
+
+## Cómo integrar los cambios (pasos)
+1. En tu `main()` o rutina de arranque:
+   ```c
+   if (interrupts_init() != XST_SUCCESS) {
+       xil_printf("Interrupts init failed\n\r");
+       return -1;
+   }
+
+   /* Inicializa drivers (DMA / IIC) */
+   if (dma_initialization() != XST_SUCCESS) { ... }
+   StartIICTask();
+
